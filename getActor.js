@@ -10,8 +10,8 @@ jsonHTTP.open("GET", url, true);
 
 jsonHTTP.onreadystatechange=function() {
    if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
-   	var data = JSON.parse(jsonHTTP.responseText);
-      document.getElementById("actorName").innerHTML = (data[0].id); 
+   		var data = JSON.parse(jsonHTTP.responseText);
+    	document.getElementById("actorName").innerHTML = data; 
    }
 }
 
