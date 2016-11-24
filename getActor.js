@@ -6,10 +6,11 @@ function getStar() {
 	var name = encodeURIComponent(document.getElementById("starName").value);
 	var url = url1 + api + url2 + name
 
-xmlhttp.onreadystatechange=
+xmlhttp.onreadystatechange=function() {
     if (this.readyState == 4 && this.status == 200) {
         myFunction(this.responseText);
     }
+}
 }
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
