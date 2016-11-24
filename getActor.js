@@ -14,7 +14,7 @@ jsonHTTP.onreadystatechange=function() {
    		var data = JSON.parse(jsonHTTP.responseText);
       var id = data.results[0].id;
       var bday = getStarBday(id);
-   		document.getElementById("json").innerHTML = "json = " + bday;
+   		//document.getElementById("json").innerHTML = "json = " + bday;
 }
 }
 jsonHTTP.send();
