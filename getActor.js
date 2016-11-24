@@ -12,7 +12,7 @@ jsonHTTP.onreadystatechange=function() {
    if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
    		var data = jsonHTTP.responseText;
    		var dataparse = JSON.parse(data);
-    	document.getElementById("actorName").innerHTML = dataparse[0].id; 
+    	document.getElementById("actorName").innerHTML = dataparse; 
    }
 }
 
