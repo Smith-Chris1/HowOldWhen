@@ -3,8 +3,8 @@ function getStar() {
 	var api = 'api_key=8bd29dde4b31287cd5579e4bd90c80b3'
 	var url1 = 'https://api.themoviedb.org/3/person?/'
 	var url2 = '&querry='
-	var name = document.getElementById("starName").value;
-	var url = encodeURIComponent(url1 + api + url2 + name)
+	var name = encodeURIComponent(document.getElementById("starName").value);
+	var url = url1 + api + url2 + name
 	document.getElementById("actorName").innerHTML = url
 };
 //function ajax(url, callback) {
