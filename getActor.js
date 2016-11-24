@@ -9,6 +9,7 @@ function getStar() {
 xmlhttp.onreadystatechange=function() {
     if (this.readyState == 4 && this.status == 200) {
         myFunction(this.responseText);
+        document.getElementById("actorName").innerHTML = this.responseText;
     }
 }
 
@@ -20,7 +21,7 @@ function myFunction(response) {
     var out = arr.id;
 
 
-document.getElementById("actorName").innerHTML = arr;
+//document.getElementById("actorName").innerHTML = arr;
 }
 //function ajax(url, callback) {
 //  var xmlhttp = new XMLHttpRequest();
