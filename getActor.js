@@ -5,7 +5,7 @@ function getStar() {
 	var url2 = '&querry='
 	var name = document.getElementById("starName").value;
 	var url = encodeURIComponent(url1 + api + url2 + name)
-	document.getElementById("actorName").innerHTML
+	document.getElementById("actorName").innerHTML = url
 };
 //function ajax(url, callback) {
 //  var xmlhttp = new XMLHttpRequest();
