@@ -32,8 +32,8 @@ jsonHTTP.open("GET", url, true);
 jsonHTTP.onreadystatechange=function() {
    if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
    		var data = JSON.parse(jsonHTTP.responseText);
-        //var id = data.results[0].id;
-   		document.getElementById("json").innerHTML = "json = " + jsonHTTP.responseText;
+        var bday = data[0].birthday;
+   		document.getElementById("json").innerHTML = "json = " + bday;
 }
 }
 jsonHTTP.send();
