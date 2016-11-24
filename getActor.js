@@ -11,7 +11,8 @@ jsonHTTP.open("GET", url, true);
 jsonHTTP.onreadystatechange=function() {
    if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
    		var data = jsonHTTP.responseText;
-    	document.getElementById("actorName").innerHTML = data; 
+   		var dataparse = JSON.parse(data);
+    	document.getElementById("actorName").innerHTML = dataparse[0].id; 
    }
 }
 
