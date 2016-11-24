@@ -10,8 +10,8 @@ xmlhttp.onreadystatechange=function() {
     if (this.readyState == 4 && this.status == 200) {
         //myFunction(this.responseText);
         var json = this.responseText;
-        var out = json.id;
-        document.getElementById("actorName").innerHTML = json;
+        var id = JSON.parse(json);
+        document.getElementById("actorName").innerHTML = id.id;
     }
 }
 
