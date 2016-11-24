@@ -17,7 +17,7 @@ xhr.addEventListener("readystatechange", function () {
 });
 
 //xhr.open("GET", "https://api.themoviedb.org/3/search/person?query=bruce%20willis&language=en-US&api_key=8bd29dde4b31287cd5579e4bd90c80b3");
-
+//change
 xhr.open("GET", url);
 
 xhr.send(data);
