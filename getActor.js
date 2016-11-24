@@ -5,14 +5,14 @@ function getStar() {
 	var url2 = '&query='
 	var callback = '&callback=test'
 	var name = encodeURIComponent(document.getElementById("starName").value);
-	var url = url1 + api + url2 + name + callback
+	var url = url1 + api + url2 + name
 
 jsonHTTP.open("GET", url, true);
 
 jsonHTTP.onreadystatechange=function() {
    if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
    		var data = jsonHTTP.responseText;
-    	document.getElementById("actorName").innerHTML = jsonHTTP.respontText; 
+    	document.getElementById("actorName").innerHTML = (data[0].id); 
    }
 }
 
