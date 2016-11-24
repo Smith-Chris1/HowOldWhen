@@ -1,26 +1,22 @@
 function getStar() {
-	var api = '&language=en-US&api_key=8bd29dde4b31287cd5579e4bd90c80b3';
+    var jsonHTTP = new XMLHttpRequest();
+	var api = 'api_key=8bd29dde4b31287cd5579e4bd90c80b3';
 	var url1 = 'https://api.themoviedb.org/3/search/person?';
 	var url2 = '&query=';
 	var name = encodeURIComponent(document.getElementById("starName").value);
-	var url = url1 + url2 + name + api;
+	var url = url1 + api + url2 + name;
 
-var data = "{}";
+jsonHTTP.open("GET", url, true);
 
-var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
-
-xhr.addEventListener("readystatechange", function () {
-  if (this.readyState === this.DONE) {
-    document.getElementById("json").innerHTML = (this.responseText);
-  }
-});
-
-//xhr.open("GET", "https://api.themoviedb.org/3/search/person?query=bruce%20willis&language=en-US&api_key=8bd29dde4b31287cd5579e4bd90c80b3");
-
-xhr.open("GET", url);
-
-xhr.send();
-
+jsonHTTP.onreadystatechange=function() {
+   if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
+   		var data = JSON.parse(jsonHTTP.responseText);
+   		document.getElementById("json").innerHTML = "json = " + (jsonHTTP.responseText);
+   		document.getElementById("actorName").innerHTML = "data variable = " + data;
+    	document.getElementById("id").innerHTML = "id should be = " + (data[0].id); 
+   }
 }
 
+jsonHTTP.send();
+
+}
