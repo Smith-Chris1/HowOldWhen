@@ -1,12 +1,12 @@
 function getStar() {
-	var xmlhttp = new XMLHttpRequest();
+	//var xmlhttp = new XMLHttpRequest();
 	var api = 'api_key=8bd29dde4b31287cd5579e4bd90c80b3'
 	var url1 = 'https://api.themoviedb.org/3/person?/'
 	var url2 = '&querry='
 	var name = document.getElementById("getStar").value;
 	var url = encodeURIComponent(url1 + api + url2 + name)
-	document.getElementById("createdOBJ1").innerHTML
-
+	document.getElementById("actorName").innerHTML
+};
 //function ajax(url, callback) {
 //  var xmlhttp = new XMLHttpRequest();
 //    xmlhttp.onreadystatechange = function(){
@@ -29,4 +29,4 @@ function getStar() {
 
 
 
-};
+
