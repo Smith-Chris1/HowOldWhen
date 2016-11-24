@@ -9,8 +9,9 @@ function getStar() {
 xmlhttp.onreadystatechange=function() {
     if (this.readyState == 4 && this.status == 200) {
         //myFunction(this.responseText);
-
-        document.getElementById("actorName").innerHTML = this.responseText;
+        var arr = JSON.parse(this.responseText);
+        var out = arr.id;
+        document.getElementById("actorName").innerHTML = out;
     }
 }
 
