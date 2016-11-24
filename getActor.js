@@ -20,7 +20,7 @@ function myFunction(response) {
     var out = arr.id;
 
 
-document.getElementById("actorName").innerHTML = resonse;
+document.getElementById("actorName").innerHTML = arr;
 }
 //function ajax(url, callback) {
 //  var xmlhttp = new XMLHttpRequest();
