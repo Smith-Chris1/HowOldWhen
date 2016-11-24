@@ -11,7 +11,7 @@ xmlhttp.onreadystatechange=function() {
         //myFunction(this.responseText);
         var arr = JSON.parse(this.responseText);
         var out = arr.id;
-        document.getElementById("actorName").innerHTML = out;
+        document.getElementById("actorName").innerHTML = arr;
     }
 }
 
