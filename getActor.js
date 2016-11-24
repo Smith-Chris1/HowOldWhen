@@ -11,7 +11,7 @@ xmlhttp.onreadystatechange=function() {
         //myFunction(this.responseText);
         var json = this.responseText;
         var id = JSON.parse(json);
-        document.getElementById("actorName").innerHTML = json.profile_path.id;
+        document.getElementById("actorName").innerHTML = json.page.id;
     }
 }
 
