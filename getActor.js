@@ -11,10 +11,10 @@ xmlhttp.onreadystatechange=function() {
         myFunction(this.responseText);
     }
 }
-}
+
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
-
+}
 function myFunction(response) {
     var arr = JSON.parse(response);
     var i;
