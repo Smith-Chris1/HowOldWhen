@@ -5,8 +5,8 @@ function getStar() {
 	var url2 = '&query='
 	var name = encodeURIComponent(document.getElementById("starName").value);
 	var url = url1 + api + url2 + name
-}
-xmlhttp.onreadystatechange=function() {
+
+xmlhttp.onreadystatechange=
     if (this.readyState == 4 && this.status == 200) {
         myFunction(this.responseText);
     }
