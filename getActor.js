@@ -9,7 +9,7 @@ function getStar() {
 jsonHTTP.open("GET", url, true);
 
 req.onreadystatechange=function() {
-   if (req.readyState==4 && req.status==200) {
+   if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
       document.getElementById("actorName").innerHTML = jsonHTTP.responseText; 
    }
 }
