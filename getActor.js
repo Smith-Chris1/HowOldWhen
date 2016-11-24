@@ -5,7 +5,7 @@ function getStar() {
 	var url2 = '&query='
 	var name = encodeURIComponent(document.getElementById("starName").value);
 	var url = url1 + api + url2 + name
-
+}
 xmlhttp.onreadystatechange=function() {
     if (this.readyState == 4 && this.status == 200) {
         myFunction(this.responseText);
@@ -18,12 +18,10 @@ function myFunction(response) {
     var arr = JSON.parse(response);
     var i;
     var out = arr.id;
-    
+    }
+
     document.getElementById("actorName").innerHTML = out;
 
-
-
-};
 //function ajax(url, callback) {
 //  var xmlhttp = new XMLHttpRequest();
 //    xmlhttp.onreadystatechange = function(){
