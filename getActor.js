@@ -19,10 +19,10 @@ function myFunction(response) {
     var arr = JSON.parse(response);
     var i;
     var out = arr.id;
-    }
 
-    document.getElementById("actorName").innerHTML = out;
 
+document.getElementById("actorName").innerHTML = out;
+}
 //function ajax(url, callback) {
 //  var xmlhttp = new XMLHttpRequest();
 //    xmlhttp.onreadystatechange = function(){
