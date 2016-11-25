@@ -1,3 +1,5 @@
+body{color:white;font-family:'Open Sans',sans-serif;font-size:14px;font-weight:400;line-height:20px;margin:0;padding:0;background-color:#19191b}
+
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -11,5 +13,45 @@ td, th {
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #ffad5b;
+}
+tr:nth-child(odd) {
+    background-color: #d31b40;
+}
+.circle {
+	width: 100px;
+	height: 100px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url(http://www.diaglobal.org/_Images/member/Generic_Image_Missing-Profile.jpg) no-repeat;
+      background-position:50% 50%;
+    background-size:100%;
+	}
+  
+ input[type="text"] {
+  padding: 10px;
+  border: solid 5px #c9c9c9;
+  transition: border 0.3s;
+  background-color: #19191b
+  font-family:'Open Sans',sans-serif;font-size:14px;font-weight:400;
+  color: grey;
+}
+.style-2 input[type="text"]:focus,
+.style-2 input[type="text"].focus {
+  border: solid 5px #969696;
+}
+
+.go {
+border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family:'Open Sans',sans-serif;font-size:14px;font-weight:400;
+    margin: 4px 2px;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #555555;
 }

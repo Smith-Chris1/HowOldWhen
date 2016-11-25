@@ -18,7 +18,7 @@ jsonHTTP.onreadystatechange=function() {
       var id = data.results[0].id;
       var name = data.results[0].name;
       //document.getElementById("profileImage").innerHTML = 'https://image.tmdb.org/t/p/w500/' + data.results[0].profile_path;  
-    var img = document.createElement("IMG"); document.getElementById("profileImage").replaceChild(img, 'https://image.tmdb.org/t/p/w500/' + data.results[0].profile_path)
+    //var img = document.createElement("IMG"); document.getElementById("profileImage").replaceChild(img, 'https://image.tmdb.org/t/p/w500/' + data.results[0].profile_path)
       //display(id)
       getStarBday(id, name);
 }
