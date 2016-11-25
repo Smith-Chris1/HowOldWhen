@@ -1,7 +1,10 @@
 body{color:white;font-family:'Open Sans',sans-serif;font-size:14px;font-weight:400;line-height:20px;margin:0;padding:0;background-color:#19191b}
 
 table {
-    font-family: arial, sans-serif;
+    color:white;
+    font-family:'Open Sans',sans-serif;
+    font-size:14px;
+    font-weight:400;
     border-collapse: collapse;
     width: 100%;
 }
@@ -24,7 +27,7 @@ tr:nth-child(odd) {
 	border-radius: 150px;
 	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
-	background: url(../HowOldWhen/NoPic.jpg) no-repeat;
+	background: url(http://www.diaglobal.org/_Images/member/Generic_Image_Missing-Profile.jpg) no-repeat;
       background-position:50% 50%;
     background-size:100%;
 	}
@@ -54,4 +57,4 @@ border: none;
     height: 40px;
     border-radius: 4px;
     background-color: #555555;
-} 
+}
