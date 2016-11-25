@@ -24,7 +24,7 @@ tr:nth-child(odd) {
 	border-radius: 150px;
 	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
-	background: url(http://www.diaglobal.org/_Images/member/Generic_Image_Missing-Profile.jpg) no-repeat;
+	background: url(../HowOldWhen/NoPic.jpg) no-repeat;
       background-position:50% 50%;
     background-size:100%;
 	}
