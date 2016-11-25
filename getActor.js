@@ -16,15 +16,17 @@ jsonHTTP.onreadystatechange=function() {
    if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
    		var data = JSON.parse(jsonHTTP.responseText);
       var id = data.results[0].id;
+      var name = data.results[0].name;
+      //document.getElementById("profileImage").innerHTML = 'https://image.tmdb.org/t/p/w500/' + data.results[0].profile_path;  
+    var img = document.createElement("IMG"); document.getElementById("profileImage").replaceChild(img, 'https://image.tmdb.org/t/p/w500/' + data.results[0].profile_path)
       //display(id)
-      getStarBday(id);
-   	  //document.getElementById("json").innerHTML = "json = " + bday;
+      getStarBday(id, name);
 }
 }
 jsonHTTP.send();
 }
 
-function getStarBday(id) {
+function getStarBday(id,name) {
   var jsonHTTP = new XMLHttpRequest();
 	var api = '?api_key=8bd29dde4b31287cd5579e4bd90c80b3';
 	var url1 = 'https://api.themoviedb.org/3/person/';
@@ -37,6 +39,8 @@ jsonHTTP.onreadystatechange=function() {
    if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
    		var data = JSON.parse(jsonHTTP.responseText);
         var bday = data.birthday;
+
+        document.getElementById('nameAge').innerHTML = name + " is " + " years old."
         getMovieList(id,bday)
    		//document.getElementById("json").innerHTML = "json = " + bday;
 }
