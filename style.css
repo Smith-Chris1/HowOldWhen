@@ -4,9 +4,12 @@
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
-  animation:searchMove 4s;
-            -moz-animation:searchMove 4s; /* Firefox */
-            -webkit-animation:searchMove 4s; /* Safari and Chrome */
+  
+  -webkit-animation-name: searchMove;
+  -webkit-animation-duration:4s;
+  -webkit-animation-iteration-count: 14;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
 }
 
 @keyframes searchMove
