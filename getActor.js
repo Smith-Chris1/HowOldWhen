@@ -13,7 +13,7 @@ function getStarID() {
 jsonHTTP.open("GET", url, true);
 
 jsonHTTP.onreadystatechange=function() {
-	document.getElementById('searchBox').search ='search';
+	document.getElementById('searchBox').search:onclick ='search';
    if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
    		var data = JSON.parse(jsonHTTP.responseText);
       var id = data.results[0].id;
