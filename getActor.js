@@ -13,6 +13,7 @@ function getStarID() {
 jsonHTTP.open("GET", url, true);
 
 jsonHTTP.onreadystatechange=function() {
+	document.getElementById('img').className ='search';
    if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
    		var data = JSON.parse(jsonHTTP.responseText);
       var id = data.results[0].id;
