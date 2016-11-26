@@ -2,8 +2,12 @@
 <head>
 	<link rel="stylesheet" type="text/css"href="../HowOldWhen/style.css">
 </head>
-<H1>how old when...</H1>
-<p><input type="text"  placeholder="search for an actor" class="focus" id="starName"=></input> <button button class="go" onclick="getStarID()">go</button></p>
+
+<div class = 'search'>
+
+<p><input type="text" placeholder="search for a star" class="focus" id="starName"></input> <button button class="go" onclick="getStarID()">go</button></p>
+
+</div>
 <p id = 'nameAge'></p>
 <div id = 'starImage' class = 'circle'></div>
 <div id=results>
@@ -11,7 +15,10 @@
 
 <table id ='movie'>
   <thead>
-
+    <tr>
+      <th>Movie</th>
+      <th>Age</th>
+    </tr>
   </thead>
   <tbody>
   
