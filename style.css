@@ -4,7 +4,26 @@
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
+  animation:searchMove 4s;
+            -moz-animation:searchMove 4s; /* Firefox */
+            -webkit-animation:searchMove 4s; /* Safari and Chrome */
 }
+
+@keyframes searchMove
+                {
+                from {top: 50%;} 
+                to{top:10%;} 
+                }
+                @-moz-keyframes searchMove
+                {
+                from {top: 50%;} 
+                to{top:10%;}
+                }
+                @-webkit-keyframes searchMove
+                {
+                from {top: 50%;} 
+                to{top:10%;}
+                }
 
 body{color:white;font-family:'Open Sans',sans-serif;font-size:14px;font-weight:400;line-height:20px;margin:0;padding:0;background-color:#19191b}
 
