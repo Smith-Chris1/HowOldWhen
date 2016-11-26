@@ -1,3 +1,11 @@
+.search {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
 body{color:white;font-family:'Open Sans',sans-serif;font-size:14px;font-weight:400;line-height:20px;margin:0;padding:0;background-color:#19191b}
 
 table {
@@ -22,15 +30,15 @@ tr:nth-child(odd) {
     background-color: #d31b40;
 }
 .circle {
-	width: 100px;
-	height: 100px;
-	border-radius: 150px;
-	-webkit-border-radius: 150px;
-	-moz-border-radius: 150px;
-	background: url(http://www.diaglobal.org/_Images/member/Generic_Image_Missing-Profile.jpg) no-repeat;
+  width: 100px;
+  height: 100px;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  background: url(http://www.diaglobal.org/_Images/member/Generic_Image_Missing-Profile.jpg) no-repeat;
       background-position:50% 50%;
     background-size:100%;
-	}
+  }
   
  input[type="text"] {
   padding: 10px;
@@ -46,6 +54,7 @@ tr:nth-child(odd) {
 }
 
 .go {
+
 border: none;
     color: white;
     text-align: center;
@@ -54,7 +63,7 @@ border: none;
     font-family:'Open Sans',sans-serif;font-size:14px;font-weight:400;
     margin: 4px 2px;
     width: 40px;
-    height: 40px;
+    height: 47px;
     border-radius: 4px;
     background-color: #555555;
 }
