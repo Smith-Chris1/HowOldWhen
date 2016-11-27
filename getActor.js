@@ -1,8 +1,7 @@
 var id = ''
 var bday = ''
 var movie = ''
-
-function getStarID() {
+function moveBar(){
 	var searching = document.getElementsByClassName('search')[0];
 
 document.getElementsByClassName('go')[0].onclick = function() {
@@ -17,7 +16,10 @@ document.getElementsByClassName('go')[0].onclick = function() {
     searchED.style.marginLeft = marginLeft;
     searchED.classList.remove('searched');    
   }  
-
+}
+}
+function getStarID() {
+	moveBar();
   var jsonHTTP = new XMLHttpRequest();
 	var api = 'api_key=8bd29dde4b31287cd5579e4bd90c80b3';
 	var url1 = 'https://api.themoviedb.org/3/search/person?';
@@ -40,7 +42,6 @@ jsonHTTP.onreadystatechange=function() {
 }
 }
 jsonHTTP.send();
-}
 }
 
 function getStarBday(id,name) {
