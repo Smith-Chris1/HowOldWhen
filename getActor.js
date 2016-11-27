@@ -5,7 +5,7 @@ function moveBar(){
 	var searching = document.getElementsByClassName('search')[0];
 
 document.getElementsByClassName('go')[0].onclick = function() {
-  if(this.innerHTML === 'go') 
+  if(this.innerHTML == 'go') 
   { 
     this.innerHTML = 'go';
     searching.classList.add('searched');
