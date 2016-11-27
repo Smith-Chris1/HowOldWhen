@@ -1,7 +1,17 @@
 var id = ''
 var bday = ''
 var movie = ''
-var searching = document.getElementsByClassName('search')[0];
+
+function getStarID() {
+  var jsonHTTP = new XMLHttpRequest();
+	var api = 'api_key=8bd29dde4b31287cd5579e4bd90c80b3';
+	var url1 = 'https://api.themoviedb.org/3/search/person?';
+	var url2 = '&query=';
+	var callback = '&callback=person'
+	var name = encodeURIComponent(document.getElementById("starName").value);
+	var url = url1 + api + url2 + name;
+
+	var searching = document.getElementsByClassName('search')[0];
 
 document.getElementsByClassName('go')[0].onclick = function() {
   if(this.innerHTML === 'go') 
@@ -16,14 +26,6 @@ document.getElementsByClassName('go')[0].onclick = function() {
     searchED.classList.remove('searched');    
   }  
 }
-function getStarID() {
-  var jsonHTTP = new XMLHttpRequest();
-	var api = 'api_key=8bd29dde4b31287cd5579e4bd90c80b3';
-	var url1 = 'https://api.themoviedb.org/3/search/person?';
-	var url2 = '&query=';
-	var callback = '&callback=person'
-	var name = encodeURIComponent(document.getElementById("starName").value);
-	var url = url1 + api + url2 + name;
 
 jsonHTTP.open("GET", url, true);
 
