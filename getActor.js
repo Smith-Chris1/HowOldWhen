@@ -11,21 +11,7 @@ function getStarID() {
 	var name = encodeURIComponent(document.getElementById("starName").value);
 	var url = url1 + api + url2 + name;
 
-	var searching = document.getElementsByClassName('search')[0];
 
-document.getElementsByClassName('go')[0].onclick = function() {
-  if(this.innerHTML === 'go') 
-  { 
-    this.innerHTML = 'go';
-    searching.classList.add('searched');
-  } else {
-    this.innerHTML = 'go';
-    var computedStyle = window.getComputedStyle(searchED),
-        marginLeft = computedStyle.getPropertyValue('margin-left');
-    searchED.style.marginLeft = marginLeft;
-    searchED.classList.remove('searched');    
-  }  
-}
 
 jsonHTTP.open("GET", url, true);
 
@@ -41,6 +27,21 @@ jsonHTTP.onreadystatechange=function() {
 }
 }
 jsonHTTP.send();
+	var searching = document.getElementsByClassName('search')[0];
+
+document.getElementsByClassName('go')[0].onclick = function() {
+  if(this.innerHTML === 'go') 
+  { 
+    this.innerHTML = 'go';
+    searching.classList.add('searched');
+  } else {
+    this.innerHTML = 'go';
+    var computedStyle = window.getComputedStyle(searchED),
+        marginLeft = computedStyle.getPropertyValue('margin-left');
+    searchED.style.marginLeft = marginLeft;
+    searchED.classList.remove('searched');    
+  }  
+}
 }
 
 function getStarBday(id,name) {
