@@ -1,6 +1,21 @@
 var id = ''
 var bday = ''
 var movie = ''
+var searching = document.getElementsByClassName('search')[0];
+
+document.getElementsByClassName('go')[0].onclick = function() {
+  if(this.innerHTML === 'go') 
+  { 
+    this.innerHTML = 'go';
+    searching.classList.add('searched');
+  } else {
+    this.innerHTML = 'go';
+    var computedStyle = window.getComputedStyle(searchED),
+        marginLeft = computedStyle.getPropertyValue('margin-left');
+    searchED.style.marginLeft = marginLeft;
+    searchED.classList.remove('searched');    
+  }  
+}
 function getStarID() {
   var jsonHTTP = new XMLHttpRequest();
 	var api = 'api_key=8bd29dde4b31287cd5579e4bd90c80b3';
@@ -13,7 +28,6 @@ function getStarID() {
 jsonHTTP.open("GET", url, true);
 
 jsonHTTP.onreadystatechange=function() {
-	document.getElementById('searchBox').search ='search:onclick';
    if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
    		var data = JSON.parse(jsonHTTP.responseText);
       var id = data.results[0].id;
