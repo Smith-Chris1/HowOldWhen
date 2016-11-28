@@ -10,7 +10,7 @@
   -ms-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
-  top: 30% !important;
+  top: 10% !important;
 }
 .circle {
   width: 100px;
@@ -70,7 +70,7 @@ background-repeat: no-repeat;
 
 
 .results {
-  margin-top:220px;
+  margin-top:260px;
 }
 
 table {
