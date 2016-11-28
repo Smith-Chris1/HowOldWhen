@@ -36,16 +36,16 @@ jsonHTTP.onreadystatechange=function() {
    		var data = JSON.parse(jsonHTTP.responseText);
       var id = data.results[0].id;
       var name = data.results[0].name;
-      //document.getElementById("profileImage").innerHTML = 'https://image.tmdb.org/t/p/w500/' + data.results[0].profile_path;  
+      var pic = 'https://image.tmdb.org/t/p/w500/' + data.results[0].profile_path;  
     //var img = document.createElement("IMG"); document.getElementById("profileImage").replaceChild(img, 'https://image.tmdb.org/t/p/w500/' + data.results[0].profile_path)
       //display(id)
-      getStarBday(id, name);
+      getStarBday(id, name, pic);
 }
 }
 jsonHTTP.send();
 }
 
-function getStarBday(id,name) {
+function getStarBday(id,name,pic) {
   var jsonHTTP = new XMLHttpRequest();
 	var api = '?api_key=8bd29dde4b31287cd5579e4bd90c80b3';
 	var url1 = 'https://api.themoviedb.org/3/person/';
@@ -60,23 +60,40 @@ jsonHTTP.onreadystatechange=function() {
         var bday = data.birthday;
         var milliseconds = Math.abs(new Date() - new Date(bday.replace(/-/g,'/')));
         var age = Math.floor(milliseconds / 31536000000)
-        document.getElementById('nameAge').innerHTML = name + " is " + age + " years old."
+        var imageBox = document.createElement('IMG');
+        imageBox.setAttribute('src', pic);
+        imageBox.className = 'star';
+  document.getElementById('starImage').appendChild(imageBox);
+        var description = document.createElement("P");
+    		var l1 = document.createTextNode(name + " is " + age + " years old.");
+        description.className = "bio";
+    		description.appendChild(l1);
+    		document.getElementById('nameAge').appendChild(description);
         getMovieList(id,bday)
-   		//document.getElementById("json").innerHTML = "json = " + bday;
 }
 }
 jsonHTTP.send();
 } 
-function display(title,releaseDate,bday) {
-    var table = document.getElementById('movie');
+function display(title,releaseDate,bday,poster) {
+    var table = document.getElementById('results');
     var tbody = table.getElementsByTagName('tbody');
-    var row = tbody[0].insertRow(0);
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
+    var row1 = tbody[0].insertRow(0);
+    var row2 = tbody[0].insertRow(1);
+    row1.setAttribute("height","200")
+    var imageBox = document.createElement('IMG');
+    imageBox.className = 'poster'
+    imageBox.setAttribute('src', poster);
+    row1.appendChild(imageBox);
+    //var cell2 = row1.insertCell(0);
+    var age;
     var milliseconds = Math.abs(new Date(releaseDate.replace(/-/g,'/')) - new Date(bday.replace(/-/g,'/')));
-        var age = Math.floor(milliseconds / 31536000000)
-    cell1.innerHTML = title;
-    cell2.innerHTML = age;
+     if (releaseDate == '?') {
+     age = '?';
+     } else {
+     var age = Math.floor(milliseconds / 31536000000);
+     }
+    row2.innerHTML = title + " , age " + age;
+
 }
 
 function getMovieList(id,bday) {
@@ -93,8 +110,14 @@ jsonHTTP.onreadystatechange=function() {
         var movieArray = data;
             for (var i = 0; i < movieArray.cast.length; i++) { 
             var movie = (movieArray.cast[i].title);
-            var releaseDate = (movieArray.cast[i].release_date)
-            display(movie, releaseDate, bday)
+            var releaseDate;
+            if (movieArray.cast[i].release_date == null){
+            releaseDate = '?';
+           } else {
+           releaseDate = (movieArray.cast[i].release_date);
+            }
+            var poster = 'https://image.tmdb.org/t/p/w500/' + movieArray.cast[i].poster_path
+            display(movie, releaseDate, bday, poster)
 }
   }
 }

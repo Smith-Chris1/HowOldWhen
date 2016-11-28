@@ -12,6 +12,35 @@
   transition: 1s;
   top: 30% !important;
 }
+.circle {
+  width: 100px;
+  height: 100px;
+    position: relative;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+  margin-top:45px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+ .star {
+       text-align: center;
+    display: inline;
+  margin-top: -30px;
+    height: 150%;
+    width: auto;
+}
+.poster{
+  position: relative;
+  //top: 50%;
+  //left: 50%;
+  height: 200px;
+  width: auto;
+      //text-align: center;
+}
 body{
 color:white;
 font-family:'Open Sans',sans-serif;
@@ -31,7 +60,21 @@ background-position:center center;
 background-repeat: no-repeat;
 }
 
+.nameAge {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+  
+
+
+.results {
+  margin-top:180px;
+}
+
 table {
+    //margin-top:160px;
     color:white;
     font-family:'Open Sans',sans-serif;
     font-size:14px;
@@ -43,27 +86,21 @@ table {
 
 td, th {
     border: 1px solid #FFAE00;
-    text-align: left;
+    text-align: center;
     padding: 8px;
 }
 
 tr:nth-child(even) {
     background-color: rgba(43,29,76,.6);
+    text-align: center;
+    padding: 8px;
 }
 tr:nth-child(odd) {
     background-color: rgba(245,38,150,.6);
+    text-align: center;
+    padding: 8px;
 }
-.circle {
-  width: 100px;
-  height: 100px;
-  border-radius: 150px;
-  -webkit-border-radius: 150px;
-  -moz-border-radius: 150px;
-  background: url(http://www.diaglobal.org/_Images/member/Generic_Image_Missing-Profile.jpg) no-repeat;
-      background-position:50% 50%;
-    background-size:100%;
-        margin: auto;
-  }
+
   
  input[type="text"] {
   padding: 10px;
@@ -91,4 +128,12 @@ border: none;
     height: 47px;
     border-radius: 4px;
     background-color: #0DA1C0;
+}
+.nameAge {
+margin-top:80px;
+margin-left:30px;
+  width: 100%;
+    position: fixed;
+  top: 50%;
+  left: 50%;
 }
