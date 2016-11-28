@@ -16,10 +16,11 @@ document.getElementsByClassName('go')[0].onclick = function() {
     searchED.style.marginLeft = marginLeft;
     searchED.classList.remove('searched');    
   }  
+  getStarID();
 }
 }
 function getStarID() {
-	moveBar();
+	//moveBar();
   var jsonHTTP = new XMLHttpRequest();
 	var api = 'api_key=8bd29dde4b31287cd5579e4bd90c80b3';
 	var url1 = 'https://api.themoviedb.org/3/search/person?';
@@ -57,8 +58,9 @@ jsonHTTP.onreadystatechange=function() {
    if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
    		var data = JSON.parse(jsonHTTP.responseText);
         var bday = data.birthday;
-
-        document.getElementById('nameAge').innerHTML = name + " is " + " years old."
+        var milliseconds = Math.abs(new Date() - new Date(bday.replace(/-/g,'/')));
+        var age = Math.floor(milliseconds / 31536000000)
+        document.getElementById('nameAge').innerHTML = name + " is " + age + " years old."
         getMovieList(id,bday)
    		//document.getElementById("json").innerHTML = "json = " + bday;
 }
@@ -71,9 +73,8 @@ function display(title,releaseDate,bday) {
     var row = tbody[0].insertRow(0);
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
-    var date1 = releaseDate.substring(0, 4);
-    var date2 = bday.substring(0, 4);
-    var age = date1 - date2;
+    var milliseconds = Math.abs(new Date(releaseDate.replace(/-/g,'/')) - new Date(bday.replace(/-/g,'/')));
+        var age = Math.floor(milliseconds / 31536000000)
     cell1.innerHTML = title;
     cell2.innerHTML = age;
 }
