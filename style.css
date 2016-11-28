@@ -10,7 +10,7 @@
   -ms-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
-  top: 15% !important;
+  top: 30% !important;
 }
 .circle {
   width: 100px;
@@ -32,6 +32,7 @@
   margin-top: -30px;
     height: 150%;
     width: auto;
+    
 }
 .poster{
   position: relative;
@@ -39,7 +40,8 @@
   //left: 50%;
   height: 200px;
   width: auto;
-      //text-align: center;
+  vertical-align:middle;
+  //display:inline-block;
 }
 body{
 color:white;
@@ -70,7 +72,7 @@ background-repeat: no-repeat;
 
 
 .results {
-  margin-top:260px;
+  margin-top:220px;
 }
 
 table {
@@ -80,25 +82,26 @@ table {
     font-size:14px;
     font-weight:400;
     border-collapse: collapse;
-    width:auto;
+    width:50px;
     margin: auto;
+    vertical-align:middle
 }
 
 td, th {
     border: 1px solid #FFAE00;
     text-align: center;
-    padding: 8px;
+vertical-align:middle
 }
 
 tr:nth-child(even) {
     background-color: rgba(43,29,76,.6);
     text-align: center;
-    padding: 8px;
+vertical-align:middle
 }
 tr:nth-child(odd) {
     background-color: rgba(245,38,150,.6);
     text-align: center;
-    padding: 8px;
+vertical-align:middle
 }
 
   
