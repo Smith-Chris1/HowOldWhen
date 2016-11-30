@@ -12,7 +12,6 @@ document.getElementById("searchButton").onclick = function() {
   }
   }
   
-
 function getStarID() {
   var jsonHTTP = new XMLHttpRequest();
 	var api = 'api_key=8bd29dde4b31287cd5579e4bd90c80b3';
@@ -30,8 +29,6 @@ jsonHTTP.onreadystatechange=function() {
       var id = data.results[0].id;
       var name = data.results[0].name;
       var pic = 'https://image.tmdb.org/t/p/w500/' + data.results[0].profile_path;  
-    //var img = document.createElement("IMG"); document.getElementById("profileImage").replaceChild(img, 'https://image.tmdb.org/t/p/w500/' + data.results[0].profile_path)
-      //display(id)
       getStarBday(id, name, pic);
 }
 }
@@ -67,28 +64,6 @@ jsonHTTP.onreadystatechange=function() {
 }
 jsonHTTP.send();
 } 
-function display(title,releaseDate,bday,poster) {
-    var table = document.getElementById('results');
-    var tbody = table.getElementsByTagName('tbody');
-    var row1 = tbody[0].insertRow(0);
-    var row2 = tbody[0].insertRow(1);
-    row1.setAttribute("vertical-align","middle")
-    var imageBox = document.createElement('IMG');
-    imageBox.className = 'poster'
-    imageBox.setAttribute('src', poster);
-    row1.appendChild(imageBox);
-    var cell2 = row1.insertCell(0);
-    var age;
-    var milliseconds = Math.abs(new Date(releaseDate.replace(/-/g,'/')) - new Date(bday.replace(/-/g,'/')));
-     if (releaseDate == '?') {
-     age = '?';
-     } else {
-     var age = Math.floor(milliseconds / 31536000000);
-     }
-    row2.innerHTML = title + " , age " + age;
-    cell2.appendChild(imageBox)
-
-}
 
 function getMovieList(id,bday) {
   var jsonHTTP = new XMLHttpRequest();
@@ -117,3 +92,32 @@ jsonHTTP.onreadystatechange=function() {
 }
 jsonHTTP.send();
 } 
+
+function display(title,releaseDate,bday,poster) {
+    var table = document.getElementById('results');
+    var tbody = table.getElementsByTagName('tbody');
+    var row1 = tbody[0].insertRow(0);
+    var row2 = tbody[0].insertRow(1);
+    var missingPoster ='https://www.themoviedb.org/assets/1c4aa0e7695a4eebe9a4d2c34a93bf34/images/no-poster-w600_and_h900_bestv2-v2.png'
+    row1.setAttribute("vertical-align","middle")
+    var imageBox = document.createElement('IMG');
+    imageBox.className = 'poster'
+    if (imageBox == null) {
+    imageBox.setAttribute('src', missingPoster);
+    row1.appendChild(missingPoster);
+    } else {
+    imageBox.setAttribute('src', poster);
+    row1.appendChild(imageBox);
+    }
+    var cell2 = row1.insertCell(0);
+    var age;
+    var milliseconds = Math.abs(new Date(releaseDate.replace(/-/g,'/')) - new Date(bday.replace(/-/g,'/')));
+     if (releaseDate == '?') {
+     age = '?';
+     } else {
+     var age = Math.floor(milliseconds / 31536000000);
+     }
+    row2.innerHTML = title + " , age " + age;
+    cell2.appendChild(imageBox)
+
+}
