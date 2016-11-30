@@ -87,7 +87,7 @@ jsonHTTP.onreadystatechange=function() {
             }
             var poster;
             if (movieArray.cast[i].poster_path == null) {
-            	poster '?';
+            	poster = '?';
             } else {
             	poster = 'https://image.tmdb.org/t/p/w500/' + movieArray.cast[i].poster_path;}
             display(movie, releaseDate, bday, poster)
