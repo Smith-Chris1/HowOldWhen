@@ -4,7 +4,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.search.searched {
+.search.found {
   -webkit-transition: 1s;
   -moz-transition: 1s;
   -ms-transition: 1s;

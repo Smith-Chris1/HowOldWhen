@@ -1,26 +1,19 @@
-var id = ''
-var bday = ''
-var movie = ''
-function moveBar(){
-	var searching = document.getElementsByClassName('search')[0];
-
-document.getElementsByClassName('go')[0].onclick = function() {
-  if(this.innerHTML == 'go') 
-  { 
-    this.innerHTML = 'go';
-    searching.classList.add('searched');
+var id = '';
+var bday = '';
+var movie = '';
+//function moveBar(){
+document.getElementById("searchButton").onclick = function() {
+	var searching = document.getElementById('searchBox');
+  if (searching.classList.contains('search')) { 
+    (searching.classList.add('found'));
+    getStarID();
   } else {
-    this.innerHTML = 'go';
-    var computedStyle = window.getComputedStyle(searchED),
-        marginLeft = computedStyle.getPropertyValue('margin-left');
-    searchED.style.marginLeft = marginLeft;
-    searchED.classList.remove('searched');    
-  }  
-  getStarID();
-}
-}
+  getStarID(); 
+  }
+  }
+  
+
 function getStarID() {
-	//moveBar();
   var jsonHTTP = new XMLHttpRequest();
 	var api = 'api_key=8bd29dde4b31287cd5579e4bd90c80b3';
 	var url1 = 'https://api.themoviedb.org/3/search/person?';
@@ -79,12 +72,12 @@ function display(title,releaseDate,bday,poster) {
     var tbody = table.getElementsByTagName('tbody');
     var row1 = tbody[0].insertRow(0);
     var row2 = tbody[0].insertRow(1);
-    row1.setAttribute("height","200")
+    row1.setAttribute("vertical-align","middle")
     var imageBox = document.createElement('IMG');
     imageBox.className = 'poster'
     imageBox.setAttribute('src', poster);
     row1.appendChild(imageBox);
-    //var cell2 = row1.insertCell(0);
+    var cell2 = row1.insertCell(0);
     var age;
     var milliseconds = Math.abs(new Date(releaseDate.replace(/-/g,'/')) - new Date(bday.replace(/-/g,'/')));
      if (releaseDate == '?') {
@@ -93,6 +86,7 @@ function display(title,releaseDate,bday,poster) {
      var age = Math.floor(milliseconds / 31536000000);
      }
     row2.innerHTML = title + " , age " + age;
+    cell2.appendChild(imageBox)
 
 }
 
