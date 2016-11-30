@@ -80,7 +80,7 @@ jsonHTTP.onreadystatechange=function() {
     		if(a.cast.release_date < b.cast.release_date) return -1;
     		if(a.cast.release_date > b.cast.release_date) return 1;
     		return 0;
-			})
+			});
         var movieArray = data;
             for (var i = 0; i < movieArray.cast.length; i++) { 
             var movie = (movieArray.cast[i].title);
