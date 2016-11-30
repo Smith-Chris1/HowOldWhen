@@ -76,9 +76,9 @@ jsonHTTP.open("GET", url, true);
 jsonHTTP.onreadystatechange=function() {
    if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
    		var data = JSON.parse(jsonHTTP.responseText);
-   		data.cast.sort( function( a, b ) {
-    		a = a.release_date.toLowerCase();
-   			b = b.release_date.toLowerCase();
+   		data.sort( function( a, b ) {
+    		a = a.cast.release_date.toLowerCase();
+   			b = b.cast.release_date.toLowerCase();
     		
     		return a < b ? -1 : a > b ? 1 : 0;
 });
