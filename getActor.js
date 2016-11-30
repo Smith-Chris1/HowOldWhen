@@ -59,6 +59,10 @@ jsonHTTP.onreadystatechange=function() {
         description.className = "bio";
     		description.appendChild(l1);
     		document.getElementById('nameAge').appendChild(description);
+    	    var resultsAdd = document.createElement("DIV");
+    resultsAdd.className = "results";
+    resultsAdd.setAttribute('id','results');
+    document.getElementById('gradient').appendChild(resultsAdd);
         getMovieList(id,bday)
 }
 }
@@ -104,10 +108,6 @@ jsonHTTP.send();
 
 function display(title,releaseDate,bday,poster) {
     var missingPoster ='https://www.themoviedb.org/assets/1c4aa0e7695a4eebe9a4d2c34a93bf34/images/no-poster-w600_and_h900_bestv2-v2.png';
-    var resultsAdd = document.createElement("DIV");
-    resultsAdd.className = "results";
-    resultsAdd.setAttribute('id','results');
-    document.getElementById('gradient').appendChild(resultsAdd);
     var age;
     var div;
     var p;
