@@ -121,6 +121,7 @@ function display(title,releaseDate,bday,poster) {
     var imageBox = document.createElement('IMG');
     div = document.createElement("DIV"); 
     div.className = 'gridRow'
+    div.setAttribute('id','gridRow');
     p = document.createElement("P");
     imageBox.className = 'poster';
     if (poster == '?') {
@@ -128,12 +129,12 @@ function display(title,releaseDate,bday,poster) {
     div.appendChild(imageBox);
     p.appendChild(text);
     document.getElementById('results').appendChild(div);
-    document.getElementById('results').appendChild(p);
+    document.getElementById('gridRow').appendChild(p);
     } else {
     imageBox.setAttribute('src', poster);   
     div.appendChild(imageBox);
     p.appendChild(text);
     document.getElementById('results').appendChild(div);
-    document.getElementById('results').appendChild(p);
+    document.getElementById('gridRow').appendChild(p);
     }
 }

@@ -79,9 +79,8 @@ background-repeat: no-repeat;
   
 .gridRow {
   width: 500px;
-  float: left; width: 200px;
-  position: absolute;
-  left: 50%;
+  float: left; 
+  height: 300px;
 
 }
 
