@@ -78,11 +78,8 @@ background-repeat: no-repeat;
 }
   
 .gridRow {
-  width: 500px;
+  width: 200px;
   float: left; 
-  height: 300px;
-
-
 }
 
 .results {
