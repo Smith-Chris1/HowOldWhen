@@ -107,7 +107,7 @@ function display(title,releaseDate,bday,poster) {
     var resultsAdd = document.createElement("DIV");
     resultsAdd.className = "results";
     resultsAdd.setAttribute('id','results');
-    document.body.appendChild(resultsAdd);
+    document.gradient.appendChild(resultsAdd);
     var age;
     var div;
     var p;
