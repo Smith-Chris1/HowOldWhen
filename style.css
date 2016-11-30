@@ -10,10 +10,6 @@
   -ms-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
-  opacity: 1;
-  transition: opacity 2s ease-in-out;
-  -moz-transition: opacity 2s ease-in-out;
-  -webkit-transition: opacity 2s ease-in-out;
   top: 15% !important;
 }
 .circle {
@@ -36,6 +32,10 @@
   margin-top: -30px;
     height: 150%;
     width: auto;
+      opacity: 1;
+  transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  -webkit-transition: opacity 2s ease-in-out;
     
 }
 .poster{
@@ -46,6 +46,10 @@
   width: auto;
   vertical-align:middle;
   //display:inline-block;
+    opacity: 1;
+  transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  -webkit-transition: opacity 2s ease-in-out;
 }
 body{
 color:white;
