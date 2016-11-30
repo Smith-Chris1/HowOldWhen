@@ -103,36 +103,30 @@ jsonHTTP.send();
 } 
 
 function display(title,releaseDate,bday,poster) {
-    var missingPoster ='https://www.themoviedb.org/assets/1c4aa0e7695a4eebe9a4d2c34a93bf34/images/no-poster-w600_and_h900_bestv2-v2.png';
-    var results = document.createElement("DIV");
-    results.className = "results";
-    results.setAttribute('id','results');
-    document.body.appendChild(results);
+    var table = document.getElementById('results');
+    var tbody = table.getElementsByTagName('tbody');
+    var row1 = tbody[0].insertRow(0);
+    var row2 = tbody[0].insertRow(1);
+    var missingPoster ='https://www.themoviedb.org/assets/1c4aa0e7695a4eebe9a4d2c34a93bf34/images/no-poster-w600_and_h900_bestv2-v2.png'
+    row1.setAttribute("vertical-align","middle")
+    var imageBox = document.createElement('IMG');
+    imageBox.className = 'poster'
+    if (poster == '?') {
+    imageBox.setAttribute('src', missingPoster);
+    row1.appendChild(imageBox);
+    } else {
+    imageBox.setAttribute('src', poster);
+    row1.appendChild(imageBox);
+    }
+    var cell2 = row1.insertCell(0);
     var age;
-    var div;
-    var p;
     var milliseconds = Math.abs(new Date(releaseDate.replace(/-/g,'/')) - new Date(bday.replace(/-/g,'/')));
      if (releaseDate == '?') {
      age = '?';
      } else {
-     age = Math.floor(milliseconds / 31536000000);
+     var age = Math.floor(milliseconds / 31536000000);
      }
-    var text = document.createTextNode(title + " , " + age);
-    var imageBox = document.createElement('IMG');
-    div = document.createElement("DIV"); 
-    p = document.createElement("P");
-    imageBox.className = 'poster';
-    if (poster == '?') {
-    imageBox.setAttribute('src', missingPoster);    
-    div.appendChild(imageBox);
-    p.appendChild(text);
-    document.results.appendChild(div);
-    document.results.appendChild(p);
-    } else {
-    imageBox.setAttribute('src', poster);   
-    div.appendChild(imageBox);
-    p.appendChild(text);
-    document.results.appendChild(div);
-    document.results.appendChild(p);
-    }
+    row2.innerHTML = title + " , age " + age;
+    cell2.appendChild(imageBox)
+
 }
