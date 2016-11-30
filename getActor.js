@@ -104,10 +104,10 @@ jsonHTTP.send();
 
 function display(title,releaseDate,bday,poster) {
     var missingPoster ='https://www.themoviedb.org/assets/1c4aa0e7695a4eebe9a4d2c34a93bf34/images/no-poster-w600_and_h900_bestv2-v2.png';
-    var results = document.createElement("DIV");
-    results.className = "results";
-    results.setAttribute('id','results');
-    document.body.appendChild(results);
+    var resultsAdd = document.createElement("DIV");
+    resultsAdd.className = "results";
+    resultsAdd.setAttribute('id','results');
+    document.body.appendChild(resultsAdd);
     var age;
     var div;
     var p;
