@@ -87,8 +87,11 @@ background-repeat: no-repeat;
   margin-top:220px;
   width:630px;
   left:50%;
-  position:absolute;
+  position:relative;
   transform:translate(-50%, 0%);
+  overflow-y: auto;
+  height:500px;
+  
 }
 
 table {
