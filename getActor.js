@@ -129,12 +129,12 @@ function display(title,releaseDate,bday,poster) {
     div.appendChild(imageBox);
     p.appendChild(text);
     document.getElementById('results').appendChild(div);
-    document.getElementById('gridRow').appendChild(p);
+    document.getElementById('results').appendChild(p);
     } else {
     imageBox.setAttribute('src', poster);   
     div.appendChild(imageBox);
     p.appendChild(text);
     document.getElementById('results').appendChild(div);
-    document.getElementById('gridRow').appendChild(p);
+    document.getElementById('results').appendChild(p);
     }
 }
