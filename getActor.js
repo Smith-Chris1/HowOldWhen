@@ -108,7 +108,7 @@ function display(title,releaseDate,bday,poster) {
     imageBox.className = 'poster'
     if (poster == '?') {
     imageBox.setAttribute('src', missingPoster);
-    row1.appendChild(missingPoster);
+    row1.appendChild(imageBox);
     } else {
     imageBox.setAttribute('src', poster);
     row1.appendChild(imageBox);
