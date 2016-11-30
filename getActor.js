@@ -79,7 +79,6 @@ jsonHTTP.onreadystatechange=function() {
    		data.sort( function( a, b ) {
     		a = a.cast.release_date.toLowerCase();
    			b = b.cast.release_date.toLowerCase();
-			}
     return a < b ? -1 : a > b ? 1 : 0;
 });
         var movieArray = data;
