@@ -126,13 +126,13 @@ function display(title,releaseDate,bday,poster) {
     imageBox.setAttribute('src', missingPoster);    
     div.appendChild(imageBox);
     p.appendChild(text);
-    document.results.appendChild(div);
-    document.results.appendChild(p);
+    document.getElementById('results').appendChild(div);
+    document.getElementById('results').appendChild(p);
     } else {
     imageBox.setAttribute('src', poster);   
     div.appendChild(imageBox);
     p.appendChild(text);
-    document.results.appendChild(div);
-    document.results.appendChild(p);
+    document.getElementById('results').appendChild(div);
+    document.getElementById('results').appendChild(p);
     }
 }
