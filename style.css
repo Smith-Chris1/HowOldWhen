@@ -12,6 +12,8 @@
   transition: 1s;
   opacity: 1;
   transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  -webkit-transition: opacity 2s ease-in-out;
   top: 15% !important;
 }
 .circle {
