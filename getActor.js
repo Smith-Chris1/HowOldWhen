@@ -106,7 +106,7 @@ function display(title,releaseDate,bday,poster) {
     row1.setAttribute("vertical-align","middle")
     var imageBox = document.createElement('IMG');
     imageBox.className = 'poster'
-    if (imageBox == '?') {
+    if (poster == '?') {
     imageBox.setAttribute('src', missingPoster);
     row1.appendChild(missingPoster);
     } else {
