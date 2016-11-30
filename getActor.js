@@ -76,12 +76,11 @@ jsonHTTP.open("GET", url, true);
 jsonHTTP.onreadystatechange=function() {
    if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
    		var data = JSON.parse(jsonHTTP.responseText);
-   		data.sort( function( a, b ) {
-    		a = a.cast.release_date.toLowerCase();
-   			b = b.cast.release_date.toLowerCase();
-    		
-    		return a < b ? -1 : a > b ? 1 : 0;
-});
+   		data.sort(function(a, b){
+    		if(a.cast.release_date < b.cast.release_date) return -1;
+    		if(a.cast.release_date > b.cast.release_date) return 1;
+    		return 0;
+			})
         var movieArray = data;
             for (var i = 0; i < movieArray.cast.length; i++) { 
             var movie = (movieArray.cast[i].title);
