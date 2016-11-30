@@ -120,6 +120,7 @@ function display(title,releaseDate,bday,poster) {
     var text = document.createTextNode(title + " , " + age);
     var imageBox = document.createElement('IMG');
     div = document.createElement("DIV"); 
+    div.className = 'gridRow'
     p = document.createElement("P");
     imageBox.className = 'poster';
     if (poster == '?') {

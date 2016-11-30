@@ -77,7 +77,13 @@ background-repeat: no-repeat;
   transform: translate(-50%, -50%);
 }
   
+.gridRow {
+  width: 500px;
+  float: left; width: 200px;
+  position: absolute;
+  left: 50%;
 
+}
 
 .results {
   margin-top:220px;
