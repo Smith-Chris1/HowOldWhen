@@ -76,7 +76,7 @@ jsonHTTP.open("GET", url, true);
 jsonHTTP.onreadystatechange=function() {
    if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
    		var data = JSON.parse(jsonHTTP.responseText);
-   		data.sort(function(a, b){
+   		data = data.sort(function(a, b){
     		if(a.cast.release_date < b.cast.release_date) return -1;
     		if(a.cast.release_date > b.cast.release_date) return 1;
     		return 0;
