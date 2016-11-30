@@ -85,7 +85,11 @@ jsonHTTP.onreadystatechange=function() {
            } else {
            releaseDate = (movieArray.cast[i].release_date);
             }
-            var poster = 'https://image.tmdb.org/t/p/w500/' + movieArray.cast[i].poster_path
+            var poster;
+            if (movieArray.cast[i].poster_path == null) {
+            	poster '?';
+            } else {
+            	poster = 'https://image.tmdb.org/t/p/w500/' + movieArray.cast[i].poster_path;}
             display(movie, releaseDate, bday, poster)
 }
   }
@@ -102,7 +106,7 @@ function display(title,releaseDate,bday,poster) {
     row1.setAttribute("vertical-align","middle")
     var imageBox = document.createElement('IMG');
     imageBox.className = 'poster'
-    if (imageBox == null) {
+    if (imageBox == '?') {
     imageBox.setAttribute('src', missingPoster);
     row1.appendChild(missingPoster);
     } else {
