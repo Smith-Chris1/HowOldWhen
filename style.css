@@ -79,12 +79,16 @@ background-repeat: no-repeat;
   
 .gridRow {
   width: 210px;
+  display: inline-block;
+  text-align: center;
 }
 
 .results {
   margin-top:220px;
   width:630px;
   left:50%;
+  position:absolute;
+  transform:translate(-50%, 0%);
 }
 
 table {
