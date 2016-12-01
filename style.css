@@ -113,6 +113,11 @@ background-size: cover;
   box-shadow: 10px 10px 30px rgba(0,0,0,.5);
 }
 
+.results::-webkit-scrollbar { 
+  /* This is the magic bit */
+  display: none;
+}
+
 table {
     //margin-top:160px;
     color:white;
