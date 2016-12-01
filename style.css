@@ -51,6 +51,18 @@
   -moz-transition: opacity 2s ease-in-out;
   -webkit-transition: opacity 2s ease-in-out;
 }
+
+.gradient {
+
+  background:
+    linear-gradient(
+      to top left, 
+      #0DA1C0, #161517,#161517, #FFBA00
+      );
+background-position:center center;
+background-repeat: no-repeat;
+}
+
 body{
 color:white;
 font-family:'Open Sans',sans-serif;
@@ -151,13 +163,3 @@ margin-left:30px;
   left: 50%;
 }
 
-.gradient {
-
-  background:
-    linear-gradient(
-      to top left, 
-      #0DA1C0, #161517,#161517, #FFBA00
-      );
-background-position:center center;
-background-repeat: no-repeat;
-}
