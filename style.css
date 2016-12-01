@@ -4,6 +4,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+
 .search.found {
   -webkit-transition: 1s;
   -moz-transition: 1s;
@@ -12,6 +14,8 @@
   transition: 1s;
   top: 15% !important;
 }
+
+
 .circle {
   width: 100px;
   height: 100px;
@@ -26,6 +30,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   }
+
+
  .star {
        text-align: center;
     display: inline;
@@ -68,7 +74,7 @@
 
 }
 
-body{
+body {
 color:white;
 font-family:'Open Sans',sans-serif;
 font-size:14px;
@@ -104,6 +110,7 @@ background-size: cover;
   left:50%;
   position:absolute;
   transform:translate(-50%, 0%);
+  overflow-y: auto;
 }
 
 table {
