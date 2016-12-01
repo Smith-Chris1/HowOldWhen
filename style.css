@@ -61,13 +61,7 @@ height:100%;
 min-height:500px;
 margin:0;
 padding:0;
-background:
-    linear-gradient(
-      to top left, 
-      #0DA1C0, #161517,#161517, #FFBA00
-      );
-background-position:center center;
-background-repeat: no-repeat;
+background:black;
 }
 
 .nameAge {
@@ -158,4 +152,15 @@ margin-left:30px;
     position: fixed;
   top: 50%;
   left: 50%;
+}
+
+.gradient {
+
+  background:
+    linear-gradient(
+      to top left, 
+      #0DA1C0, #161517,#161517, #FFBA00
+      );
+background-position:center center;
+background-repeat: no-repeat;
 }
