@@ -136,6 +136,8 @@ function display(title,releaseDate,bday,poster) {
     document.getElementById('results').appendChild(div).appendChild(p);
     }
 }
+
+$( document ).ready(function() {
 $( ".cross" ).hide();
 $( ".menu" ).hide();
 $( ".hamburger" ).click(function() {
@@ -149,5 +151,6 @@ $( ".cross" ).click(function() {
 $( ".menu" ).slideToggle( "slow", function() {
 $( ".cross" ).hide();
 $( ".hamburger" ).show();
+});
 });
 });
