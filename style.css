@@ -235,8 +235,9 @@ margin-left:30px;
 }
 
 .span {
+position:   fixed;
 margin-top: 20px;
-margin-left: 60px;
+margin-left: 5px;
 color: white;
 
 }
