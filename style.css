@@ -53,7 +53,12 @@
 }
 
 .gradient {
-
+  background-image: 
+    linear-gradient(
+      to top left, 
+      #0DA1C0, #161517,#161517, #FFBA00
+      );
+    background-size: cover;
 
 }
 
@@ -68,11 +73,7 @@ min-height:500px;
 margin:0;
 padding:0;
 background:black;
-  background-image: :
-    linear-gradient(
-      to top left, 
-      #0DA1C0, #161517,#161517, #FFBA00
-      );
+
 background-position:center center;
 background-repeat: no-repeat;
 background-size: cover;
