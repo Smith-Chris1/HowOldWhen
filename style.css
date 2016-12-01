@@ -81,11 +81,8 @@ background:black;
   margin-top:220px;
   width:630px;
   left:50%;
-  position:relative;
+  position:absolute;
   transform:translate(-50%, 0%);
-  overflow-y: auto;
-  height:500px;
-  
 }
 
 table {
