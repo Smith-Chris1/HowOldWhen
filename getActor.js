@@ -117,7 +117,7 @@ function display(title,releaseDate,bday,poster) {
      } else {
      age = Math.floor(milliseconds / 31536000000);
      }
-    var text = document.createTextNode(title + " , " + age);
+    var text = document.createTextNode(title + " , age " + age);
     var imageBox = document.createElement('IMG');
     div = document.createElement("DIV"); 
     div.className = 'gridRow'
@@ -129,12 +129,10 @@ function display(title,releaseDate,bday,poster) {
     div.appendChild(imageBox);
     p.appendChild(text);
     document.getElementById('results').appendChild(div).appendChild(p);
-    //document.getElementById('results').appendChild(p);
     } else {
     imageBox.setAttribute('src', poster);   
     div.appendChild(imageBox);
     p.appendChild(text);
     document.getElementById('results').appendChild(div).appendChild(p);
-    //document.getElementById('results').appendChild(p);
     }
 }
