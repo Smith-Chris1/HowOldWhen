@@ -53,7 +53,13 @@
 }
 
 .gradient {
-  background-image: 
+      position: absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    overflow:hidden;
+  background: 
     linear-gradient(
       to top left, 
       #0DA1C0, #161517,#161517, #FFBA00
