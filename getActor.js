@@ -6,8 +6,9 @@ document.getElementById("searchButton").onclick = function() {
 	var searching = document.getElementById('searchBox');
   if (searching.classList.contains('search')) { 
     (searching.classList.add('found'));
-    localStorage.setItem(key, val);
-    populateList(searching);
+    var key = document.getElementById("searchBox").value;
+    localStorage.setItem(key);
+    populateList(localStorage);
     getStarID();
   } else {
   getStarID(); 
