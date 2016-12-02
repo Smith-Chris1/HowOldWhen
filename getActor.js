@@ -11,7 +11,6 @@ document.getElementById("searchButton").onclick = function() {
 	    p = document.createElement("P");
 	    p.appendChild(searching);
     }
-    populateList(localStorage);
     getStarID();
   } else {
   getStarID(); 
