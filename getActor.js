@@ -6,6 +6,8 @@ document.getElementById("searchButton").onclick = function() {
 	var searching = document.getElementById('searchBox');
   if (searching.classList.contains('search')) { 
     (searching.classList.add('found'));
+    localStorage.setItem(key, val);
+    populateList(searching);
     getStarID();
   } else {
   getStarID(); 
@@ -136,6 +138,18 @@ function display(title,releaseDate,bday,poster) {
     document.getElementById('results').appendChild(div).appendChild(p);
     }
 }
+
+function populateList(json) {
+    var paragraph = document.getElementById('recent');
+    paragraph.innerHTML = "";
+    
+    for (var prop in json) {
+        var p = document.createElement('P');
+
+        p.appendChild(prop);
+        paragraph.appendChild(p);
+    }
+
 function openNav() {
     document.getElementById("myNav").style.width = "30%";
 }
