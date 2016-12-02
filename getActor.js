@@ -6,8 +6,11 @@ document.getElementById("searchButton").onclick = function() {
 	var searching = document.getElementById('searchBox');
   if (searching.classList.contains('search')) { 
     (searching.classList.add('found'));
-    var key = document.getElementById("searchBox").value;
-    localStorage.key;
+    localStorage.setItem('recent','searching');
+    for (var i in localStorage) {
+	    p = document.createElement("P");
+	    p.appendChild(searching);
+    }
     populateList(localStorage);
     getStarID();
   } else {
@@ -137,18 +140,6 @@ function display(title,releaseDate,bday,poster) {
     div.appendChild(imageBox);
     p.appendChild(text);
     document.getElementById('results').appendChild(div).appendChild(p);
-    }
-}
-
-function populateList(json) {
-    var paragraph = document.getElementById('recent');
-    paragraph.innerHTML = "";
-    
-    for (var prop in json) {
-        var p = document.createElement('P');
-
-        p.appendChild(prop);
-        paragraph.appendChild(p);
     }
 }
 
