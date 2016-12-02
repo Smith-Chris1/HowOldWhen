@@ -149,6 +149,7 @@ function populateList(json) {
         p.appendChild(prop);
         paragraph.appendChild(p);
     }
+}
 
 function openNav() {
     document.getElementById("myNav").style.width = "30%";
