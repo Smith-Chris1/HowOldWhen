@@ -20,7 +20,7 @@ function getStarID() {
 	var callback = '&callback=person'
 	var name = encodeURIComponent(document.getElementById("starName").value);
 	var url = url1 + api + url2 + name;
-    localStorage.setItem('recent','starName');
+    localStorage.setItem('recent',document.getElementById("starName").value);
     for (var i in localStorage) {
 	    var p = document.createElement("P");
 	    p.appendChild(name);
