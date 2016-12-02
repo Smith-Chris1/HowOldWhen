@@ -6,11 +6,6 @@ document.getElementById("searchButton").onclick = function() {
 	var searching = document.getElementById('searchBox');
   if (searching.classList.contains('search')) { 
     (searching.classList.add('found'));
-    localStorage.setItem('recent','searching');
-    for (var i in localStorage) {
-	    p = document.createElement("P");
-	    p.appendChild(searching);
-    }
     getStarID();
   } else {
   getStarID(); 
@@ -25,7 +20,11 @@ function getStarID() {
 	var callback = '&callback=person'
 	var name = encodeURIComponent(document.getElementById("starName").value);
 	var url = url1 + api + url2 + name;
-
+    localStorage.setItem('recent','starName');
+    for (var i in localStorage) {
+	    p = document.createElement("P");
+	    p.appendChild(searching);
+    }
 jsonHTTP.open("GET", url, true);
 
 jsonHTTP.onreadystatechange=function() {
