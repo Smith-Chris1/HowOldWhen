@@ -23,7 +23,7 @@ function getStarID() {
     localStorage.setItem('recent',document.getElementById("starName").value);
     for (var i in localStorage) {
 	    var p = document.createElement("P");
-	    p.appendChild(recent);
+	    p.appendChild(localStorage[i]);
     }
 jsonHTTP.open("GET", url, true);
 
