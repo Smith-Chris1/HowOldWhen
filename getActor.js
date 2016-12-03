@@ -22,7 +22,7 @@ function getStarID() {
 	var url = url1 + api + url2 + name;
     localStorage.setItem('recent',document.getElementById("starName").value);
     var p = document.createElement("P");
-	p.appendChild(localStorage[recent]);
+	p.appendChild(localStorage.recent);
 	document.getElementById('recent').appendChild(p);
 jsonHTTP.open("GET", url, true);
 
