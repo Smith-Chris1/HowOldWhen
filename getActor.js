@@ -21,11 +21,9 @@ function getStarID() {
 	var name = encodeURIComponent(document.getElementById("starName").value);
 	var url = url1 + api + url2 + name;
     localStorage.setItem('recent',document.getElementById("starName").value);
-    for (var i in localStorage) {
-	    var p = document.createElement("P");
-	    p.appendChild(localStorage[recent]);
-	    document.getElementById('recent').appendChild(p);
-    }
+    var p = document.createElement("P");
+	p.appendChild(localStorage[recent]);
+	document.getElementById('recent').appendChild(p);
 jsonHTTP.open("GET", url, true);
 
 jsonHTTP.onreadystatechange=function() {
