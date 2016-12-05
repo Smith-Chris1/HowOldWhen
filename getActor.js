@@ -20,10 +20,14 @@ function getStarID() {
 	var callback = '&callback=person'
 	var name = encodeURIComponent(document.getElementById("starName").value);
 	var url = url1 + api + url2 + name;
-    localStorage.setItem('recent',document.getElementById("starName").value);
-    var p = document.createElement("P");
-	p.appendChild(localStorage.recent);
-	document.getElementById('recent').appendChild(p);
+	var field = document.querySelectorAll('[data-persist]')
+	for (i=0;i<field.length;i++){
+  	var stored = localStorage.getItem(field[i].getAttribute('searchBox'))
+  	if (stored) field[i].value = stored
+  	field[i].addEventListener('input',function(){
+  	  localStorage.setItem(this.getAttribute('data-persist'),this.value)
+ 	})
+}
 jsonHTTP.open("GET", url, true);
 
 jsonHTTP.onreadystatechange=function() {
