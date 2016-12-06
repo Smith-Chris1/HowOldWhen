@@ -20,13 +20,29 @@ function getStarID() {
 	var callback = '&callback=person'
 	var name = encodeURIComponent(document.getElementById("starName").value);
 	var url = url1 + api + url2 + name;
-	var field = document.querySelectorAll('[data-persist]')
-	for (i=0;i<field.length;i++){
-  	var stored = localStorage.getItem(field[i].getAttribute('searchBox'))
-  	if (stored) field[i].value = stored
-  	field[i].addEventListener('input',function(){
-  	  localStorage.setItem(this.getAttribute('data-persist'),this.value)
- 	})
+	var recentOne;
+	var recentTwo;
+	var recentThree;
+	//if(typeof(Storage)!=="undefined") {
+    //	if recentOne == null;
+    		recentOne = document.getElementById("starName").value;
+    		p = document.createElement("P");
+    		p.appendChild(recentOne);
+    		document.getElementById('recent').appendChild(p);
+    //} else {
+    //	if recentTwo == null;
+    //		recentTwo = document.getElementById("starName").value;
+    //} else {
+    //	if recentThree == null;
+    //		recentThree = document.getElementById("starName").value;
+    //}
+    //}
+  //}
+	//else
+  //{
+  // Sorry! No Web Storage support..
+  //}
+
 }
 jsonHTTP.open("GET", url, true);
 
@@ -38,7 +54,7 @@ jsonHTTP.onreadystatechange=function() {
       var pic = 'https://image.tmdb.org/t/p/w500/' + data.results[0].profile_path;  
       getStarBday(id, name, pic);
 }
-}
+//}
 jsonHTTP.send();
 }
 
