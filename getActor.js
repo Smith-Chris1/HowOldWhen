@@ -36,15 +36,19 @@ function getStarID() {
 	var name = encodeURIComponent(document.getElementById("starName").value);
 	var url = url1 + api + url2 + name;
 	if (localStorage.getItem("recentOne") !== null) {
-if (localStorage.getItem("recentTwo") !== null) { localStorage.setItem('recentThree',localStorage.getItem('recentTwo'));
-document.getElementById("searchThree").innerHTML = localStorage.getItem("recentThree")}
-    else {
-localStorage.setItem('recentTwo',localStorage.getItem('recentOne'));
-    document.getElementById("searchTwo").innerHTML = localStorage.getItem("recentTwo")
-localStorage.setItem('recentOne',document.getElementById("starName").value);
-  document.getElementById("searchOne").innerHTML = localStorage.getItem("recentOne")}
+		if (localStorage.getItem("recentTwo") !== null) { 
+			localStorage.setItem('recentThree',localStorage.getItem('recentTwo'));
+			document.getElementById("searchThree").innerHTML = localStorage.getItem("recentThree")
+    	} else {
+		localStorage.setItem('recentTwo',localStorage.getItem('recentOne'));
+    	document.getElementById("searchTwo").innerHTML = localStorage.getItem("recentTwo") 
+    	localStorage.setItem('recentOne',document.getElementById("starName").value);
+  		document.getElementById("searchOne").innerHTML = localStorage.getItem("recentOne")}
+    } else {
+	localStorage.setItem('recentOne',document.getElementById("starName").value);
+  	document.getElementById("searchOne").innerHTML = localStorage.getItem("recentOne")}
 }
-//document.getElementById("recent").innerHTML = localStorage.getItem("recentOne")
+
 jsonHTTP.open("GET", url, true);
 
 jsonHTTP.onreadystatechange=function() {
