@@ -82,7 +82,7 @@ jsonHTTP.onreadystatechange=function() {
         var imageBox = document.createElement('IMG');
         imageBox.setAttribute('src', pic);
         imageBox.className = 'star';
-     if (searching.classList.contains('search found')) { 
+     if (document.getElementById('searchBox').classList.contains('search found')) { 
     document.getElementById('starImage').replaceChild(imageBox);
   } else {
   	 document.getElementById('starImage').appendChild(imageBox);
