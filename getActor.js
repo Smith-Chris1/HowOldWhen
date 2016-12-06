@@ -36,7 +36,7 @@ function getStarID() {
 	var name = encodeURIComponent(document.getElementById("starName").value);
 	var url = url1 + api + url2 + name;
 	if (localStorage.getItem("recentOne") !== null) {
-if localStorage.getItem("recentTwo") !=== null) { localStorage.setItem('recentThree',localStorage.getItem('recentTwo'));
+if (localStorage.getItem("recentTwo") !=== null) { localStorage.setItem('recentThree',localStorage.getItem('recentTwo'));
 document.getElementById("searchThree").innerHTML = localStorage.getItem("recentThree")}
     else {
 localStorage.setItem('recentTwo',localStorage.getItem('recentOne'));
