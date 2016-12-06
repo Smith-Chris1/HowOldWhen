@@ -20,11 +20,13 @@ function getStarID() {
 	var callback = '&callback=person'
 	var name = encodeURIComponent(document.getElementById("starName").value);
 	var url = url1 + api + url2 + name;
-
+	if (typeof(Storage) !== "undefined") {
     recentOneI = document.getElementById("starName").value;
     localStorage.setItem('recentOne',recentOneI);
-    		document.getElementById("recent").innerHTML = localStorage.getItem("recentOne");
- 
+    document.getElementById("recent").innerHTML = localStorage.getItem("recentOne");
+ 	} else {
+    document.getElementById("recent").innerHTML = "I can't get your recent searches";
+}
 jsonHTTP.open("GET", url, true);
 
 jsonHTTP.onreadystatechange=function() {
