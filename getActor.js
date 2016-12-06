@@ -1,7 +1,14 @@
 var id = '';
 var bday = '';
 var movie = '';
-//function moveBar(){
+
+if (typeof(Storage) !== "undefined") {
+
+    document.getElementById("recent").innerHTML = localStorage.getItem("recentOne");
+ 	} else {
+    document.getElementById("recent").innerHTML = "I can't get your recent searches";
+}
+
 document.getElementById("searchButton").onclick = function() {
 	var searching = document.getElementById('searchBox');
   if (searching.classList.contains('search')) { 
@@ -20,13 +27,8 @@ function getStarID() {
 	var callback = '&callback=person'
 	var name = encodeURIComponent(document.getElementById("starName").value);
 	var url = url1 + api + url2 + name;
-	if (typeof(Storage) !== "undefined") {
-    recentOneI = document.getElementById("starName").value;
+	    recentOneI = document.getElementById("starName").value;
     localStorage.setItem('recentOne',recentOneI);
-    document.getElementById("recent").innerHTML = localStorage.getItem("recentOne");
- 	} else {
-    document.getElementById("recent").innerHTML = "I can't get your recent searches";
-}
 jsonHTTP.open("GET", url, true);
 
 jsonHTTP.onreadystatechange=function() {
