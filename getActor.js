@@ -25,8 +25,8 @@ function getStarID() {
 	//var recentThree;
 	//if(typeof(Storage)!=="undefined") {
     //	if recentOne == null;
-    localStorage.setItem(document.getElementById('recentOne','starName').value);
-    		//recentOne = document.getElementById("starName").value;
+    recentOneI = document.getElementById("starName").value;
+    localStorage.setItem('recentOne',recentOneI);
     		document.getElementById("recent").innerHTML = localStorage.getItem("recentOne");
     //} else {
     //	if recentTwo == null;
