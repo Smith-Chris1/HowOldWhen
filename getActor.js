@@ -36,18 +36,19 @@ function getStarID() {
 	var name = encodeURIComponent(document.getElementById("starName").value);
 	var url = url1 + api + url2 + name;
 	if (localStorage.getItem("recentOne") !== null) {
-		if (localStorage.getItem("recentTwo") !== null) { 
+		if (localStorage.getItem("recentTwo") !== null) {
 			localStorage.setItem('recentThree',localStorage.getItem('recentTwo'));
+      localStorage.setItem('recentTwo', localStorage.getItem('recentOne'));
 			document.getElementById("searchThree").innerHTML = localStorage.getItem("recentThree")
+      document.getElementById("searchTwo").innerHTML = localStorage.getItem("recentTwo")
     	} else {
 		localStorage.setItem('recentTwo',localStorage.getItem('recentOne'));
-    	document.getElementById("searchTwo").innerHTML = localStorage.getItem("recentTwo") 
-    	localStorage.setItem('recentOne',document.getElementById("starName").value);
+    	document.getElementById("searchTwo").innerHTML = localStorage.getItem("recentTwo");
+      	localStorage.setItem('recentOne',document.getElementById("starName").value);
   		document.getElementById("searchOne").innerHTML = localStorage.getItem("recentOne")
-    } else {
+    } 
 	localStorage.setItem('recentOne',document.getElementById("starName").value);
   	document.getElementById("searchOne").innerHTML = localStorage.getItem("recentOne")}
-	}
 
 jsonHTTP.open("GET", url, true);
 
@@ -81,6 +82,11 @@ jsonHTTP.onreadystatechange=function() {
         var imageBox = document.createElement('IMG');
         imageBox.setAttribute('src', pic);
         imageBox.className = 'star';
+     if (searching.classList.contains('search found')) { 
+    document.getElementById('starImage').replaceChild(imageBox);
+  }
+        var description = document.createElement("P");
+    		var l1 = document.createTextNode(name + " is " + age + " years old.");}
   document.getElementById('starImage').appendChild(imageBox);
         var description = document.createElement("P");
     		var l1 = document.createTextNode(name + " is " + age + " years old.");
