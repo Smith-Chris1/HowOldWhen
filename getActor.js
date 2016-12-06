@@ -20,29 +20,11 @@ function getStarID() {
 	var callback = '&callback=person'
 	var name = encodeURIComponent(document.getElementById("starName").value);
 	var url = url1 + api + url2 + name;
-	//var recentOne;
-	//var recentTwo;
-	//var recentThree;
-	//if(typeof(Storage)!=="undefined") {
-    //	if recentOne == null;
+
     recentOneI = document.getElementById("starName").value;
     localStorage.setItem('recentOne',recentOneI);
     		document.getElementById("recent").innerHTML = localStorage.getItem("recentOne");
-    //} else {
-    //	if recentTwo == null;
-    //		recentTwo = document.getElementById("starName").value;
-    //} else {
-    //	if recentThree == null;
-    //		recentThree = document.getElementById("starName").value;
-    //}
-    //}
-  //}
-	//else
-  //{
-  // Sorry! No Web Storage support..
-  //}
-
-}
+ 
 jsonHTTP.open("GET", url, true);
 
 jsonHTTP.onreadystatechange=function() {
@@ -53,7 +35,7 @@ jsonHTTP.onreadystatechange=function() {
       var pic = 'https://image.tmdb.org/t/p/w500/' + data.results[0].profile_path;  
       getStarBday(id, name, pic);
 }
-//}
+}
 jsonHTTP.send();
 }
 
