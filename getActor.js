@@ -78,26 +78,25 @@ jsonHTTP.onreadystatechange=function() {
    		var data = JSON.parse(jsonHTTP.responseText);
         var bday = data.birthday;
         var milliseconds = Math.abs(new Date() - new Date(bday.replace(/-/g,'/')));
-        var age = Math.floor(milliseconds / 31536000000)
+        var age = Math.floor(milliseconds / 31536000000);
         var imageBox = document.createElement('IMG');
         imageBox.setAttribute('src', pic);
         imageBox.className = 'star';
      if (searching.classList.contains('search found')) { 
     document.getElementById('starImage').replaceChild(imageBox);
-  }
-        var description = document.createElement("P");
-    		var l1 = document.createTextNode(name + " is " + age + " years old.");}
-  document.getElementById('starImage').appendChild(imageBox);
-        var description = document.createElement("P");
-    		var l1 = document.createTextNode(name + " is " + age + " years old.");
-        description.className = "bio";
-    		description.appendChild(l1);
-    		document.getElementById('nameAge').appendChild(description);
-    	    var resultsAdd = document.createElement("DIV");
+  } else {
+  	 document.getElementById('starImage').appendChild(imageBox);
+  } 
+    var description = document.createElement("P");
+    var l1 = document.createTextNode(name + " is " + age + " years old.");
+    description.className = "bio";
+    description.appendChild(l1);
+    document.getElementById('nameAge').appendChild(description);
+    var resultsAdd = document.createElement("DIV");
     resultsAdd.className = "results";
     resultsAdd.setAttribute('id','results');
     document.getElementById('gradient').appendChild(resultsAdd);
-        getMovieList(id,bday)
+    getMovieList(id,bday)
 }
 }
 jsonHTTP.send();
