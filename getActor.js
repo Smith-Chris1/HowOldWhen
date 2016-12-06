@@ -1,7 +1,7 @@
 var id = '';
 var bday = '';
 var movie = '';
-
+var recentOne;
 if (typeof(Storage) !== "undefined") {
     document.getElementById("recent").innerHTML = localStorage.getItem("recentOne");
  	} else {
