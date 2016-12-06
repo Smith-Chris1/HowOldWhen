@@ -20,15 +20,14 @@ function getStarID() {
 	var callback = '&callback=person'
 	var name = encodeURIComponent(document.getElementById("starName").value);
 	var url = url1 + api + url2 + name;
-	var recentOne;
-	var recentTwo;
-	var recentThree;
+	//var recentOne;
+	//var recentTwo;
+	//var recentThree;
 	//if(typeof(Storage)!=="undefined") {
     //	if recentOne == null;
-    		recentOne = document.getElementById("starName").value;
-    		p = document.createElement("P");
-    		p.appendChild(recentOne);
-    		document.getElementById('recent').appendChild(p);
+    localStorage.setItem(document.getElementById('recentOne','starName').value);
+    		//recentOne = document.getElementById("starName").value;
+    		document.getElementById("recent").innerHTML = localStorage.getItem("recentOne");
     //} else {
     //	if recentTwo == null;
     //		recentTwo = document.getElementById("starName").value;
