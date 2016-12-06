@@ -1,11 +1,19 @@
 var id = '';
 var bday = '';
 var movie = '';
-var recentOne = "test the variable";
+var recentOne;
+var recentTwo;
+var recentThree;
+
 if (typeof(Storage) !== "undefined") {
-    document.getElementById("recent").innerHTML = localStorage.getItem("recentOne");
+  if (localStorage.getItem("recentOne") === null)  {
+  localStorage.setItem('recentOne',"Please search for a star.") 
+} else {
+    document.getElementById("searchOne").innerHTML = localStorage.getItem("recentOne");
+document.getElementById("searchTwo").innerHTML = localStorage.getItem("recentTwo");
+document.getElementById("searchThree").innerHTML = localStorage.getItem("recentThree");}
  	} else {
-    document.getElementById("recent").innerHTML = "I can't get your recent searches";
+    document.getElementById("recent").innerHTML = "Please us a different browser to view recent searches.";
 }
 
 
@@ -27,9 +35,15 @@ function getStarID() {
 	var callback = '&callback=person'
 	var name = encodeURIComponent(document.getElementById("starName").value);
 	var url = url1 + api + url2 + name;
-	recentOneI = document.getElementById("starName").value;
-    localStorage.setItem('recentOne',recentOneI);
-
+	if (localStorage.getItem("recentTwo") !== null) {
+    //recentOneI = document.getElementById("starName").value;
+localStorage.setItem('recentThree',localStorage.getItem('recentTwo'));
+document.getElementById("searchThree").innerHTML = localStorage.getItem("recentThree")
+localStorage.setItem('recentTwo',localStorage.getItem('recentOne'));
+    document.getElementById("searchTwo").innerHTML = localStorage.getItem("recentTwo")
+localStorage.setItem('recentOne',document.getElementById("starName").value);
+  document.getElementById("searchOne").innerHTML = localStorage.getItem("recentOne")}
+//document.getElementById("recent").innerHTML = localStorage.getItem("recentOne")
 jsonHTTP.open("GET", url, true);
 
 jsonHTTP.onreadystatechange=function() {

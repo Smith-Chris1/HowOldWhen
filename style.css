@@ -114,7 +114,6 @@ background-size: cover;
 }
 
 .results::-webkit-scrollbar { 
-  /* This is the magic bit */
   display: none;
 }
 
@@ -240,4 +239,15 @@ margin-top: 20px;
 margin-left: 5px;
 color: white;
 
+}
+
+.recent {
+  margin-top:440px;
+  width:660px;
+  height:500px;
+  left:50%;
+  position:relative;
+  transform:translate(-50%, 0%);
+  background-color: rgba(0,0,0,.7);
+  box-shadow: 10px 0px 60px rgba(0,0,0,.6);
 }
