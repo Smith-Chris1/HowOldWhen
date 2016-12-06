@@ -43,6 +43,7 @@ localStorage.setItem('recentTwo',localStorage.getItem('recentOne'));
     document.getElementById("searchTwo").innerHTML = localStorage.getItem("recentTwo")
 localStorage.setItem('recentOne',document.getElementById("starName").value);
   document.getElementById("searchOne").innerHTML = localStorage.getItem("recentOne")}
+}
 //document.getElementById("recent").innerHTML = localStorage.getItem("recentOne")
 jsonHTTP.open("GET", url, true);
 
