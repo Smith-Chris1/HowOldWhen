@@ -35,10 +35,10 @@ function getStarID() {
 	var callback = '&callback=person'
 	var name = encodeURIComponent(document.getElementById("starName").value);
 	var url = url1 + api + url2 + name;
-	if (localStorage.getItem("recentTwo") !== null) {
-    //recentOneI = document.getElementById("starName").value;
-localStorage.setItem('recentThree',localStorage.getItem('recentTwo'));
-document.getElementById("searchThree").innerHTML = localStorage.getItem("recentThree")
+	if (localStorage.getItem("recentOne") !== null) {
+if localStorage.getItem("recentTwo") !=== null) { localStorage.setItem('recentThree',localStorage.getItem('recentTwo'));
+document.getElementById("searchThree").innerHTML = localStorage.getItem("recentThree")}
+    else {
 localStorage.setItem('recentTwo',localStorage.getItem('recentOne'));
     document.getElementById("searchTwo").innerHTML = localStorage.getItem("recentTwo")
 localStorage.setItem('recentOne',document.getElementById("starName").value);
