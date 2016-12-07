@@ -6,7 +6,11 @@
 }
 
 
-.search.found {
+.search_found {
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   -webkit-transition: 1s;
   -moz-transition: 1s;
   -ms-transition: 1s;
@@ -31,8 +35,7 @@
   transform: translate(-50%, -50%);
   }
 
-
- .star {
+ .star1 {
        text-align: center;
     display: inline;
   margin-top: -30px;
@@ -42,7 +45,6 @@
   transition: opacity 2s ease-in-out;
   -moz-transition: opacity 2s ease-in-out;
   -webkit-transition: opacity 2s ease-in-out;
-    
 }
 .poster{
   position: relative;
@@ -242,10 +244,10 @@ color: white;
 }
 
 .recent {
-  margin-top:440px;
-  width:660px;
-  height:500px;
-  left:50%;
+  margin-top:80px;
+  width:100px;
+  height:100px;
+  margin-left:150px;
   position:relative;
   transform:translate(-50%, 0%);
   background-color: rgba(0,0,0,.7);
