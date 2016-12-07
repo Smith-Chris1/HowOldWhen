@@ -16,7 +16,7 @@
   -ms-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
-  top: 15% !important;
+  top: 18% !important;
 }
 
 
@@ -30,7 +30,7 @@
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     border-radius: 50%;
-  margin-top:45px;
+  margin-top:53px;
   left: 50%;
   transform: translate(-50%, -50%);
   }
@@ -91,7 +91,7 @@ background-size: cover;
 }
 
 .nameAge {
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -104,9 +104,11 @@ background-size: cover;
 }
 
 .results {
-  margin-top:220px;
+  margin-top:200px;
+  padding-top:10px;
+  padding-bottom:500px;
   width:660px;
-  height:500px;
+  height:300px;
   left:50%;
   position:relative;
   transform:translate(-50%, 0%);
@@ -119,36 +121,6 @@ background-size: cover;
   display: none;
 }
 
-table {
-    //margin-top:160px;
-    color:white;
-    font-family:'Open Sans',sans-serif;
-    font-size:14px;
-    font-weight:400;
-    border-collapse: collapse;
-    width:50px;
-    margin: auto;
-    vertical-align:middle
-}
-
-td, th {
-    border: 1px solid #FFAE00;
-    text-align: center;
-vertical-align:middle
-}
-
-tr:nth-child(even) {
-    background-color: rgba(43,29,76,.6);
-    text-align: center;
-vertical-align:middle
-}
-tr:nth-child(odd) {
-    background-color: rgba(245,38,150,.6);
-    text-align: center;
-vertical-align:middle
-}
-
-  
  input[type="text"] {
   padding: 10px;
   border: solid 5px #FFAE00;
@@ -271,8 +243,15 @@ color: white;
 }
 
 .recent_found {
+  border-radius:10px;
+  color: #818181;
+  width:200px;
+  height:120px;
+  text-align: center;
+  display: inline;
+  margin-top: -30px;
     position: absolute;
-  top: 50%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transition: 1s;
@@ -280,7 +259,7 @@ color: white;
   -ms-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
-  top: 15% !important;
+  top: 120% !important;
 }
 
 .begin {
@@ -293,4 +272,14 @@ color: white;
   left: 50%;
   transform: translate(-50%, -50%);
     color: #818181;
+}
+
+.error {
+  text-align: center;
+  margin-top: -120px;
+  font-size:18px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

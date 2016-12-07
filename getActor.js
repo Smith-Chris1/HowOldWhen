@@ -5,6 +5,10 @@ var recentOne;
 var recentTwo;
 var recentThree;
 
+document.getElementById("searchOne").addEventListener("click", function() {
+    getStarID(localStorage.getItem('recentOne')); 
+}, false);
+
 if (typeof(Storage) !== "undefined") {
   if (localStorage.getItem("recentOne") === null)  {
   localStorage.setItem('recentOne',"Please search for a star.") 
@@ -16,28 +20,36 @@ document.getElementById("searchThree").innerHTML = localStorage.getItem("recentT
     document.getElementById("recent").innerHTML = "Please us a different browser to view recent searches.";
 }
 
-
+ 
 document.getElementById("searchButton").onclick = function() {
+  if (encodeURIComponent(document.getElementById("starName").value) === null) {
+alert.(encodeURIComponent(document.getElementById("starName").value));
+    p = document.createElement("P");
+    p.innerHTML = "you must enter a name.";
+    document.getElementById('error').appendChild(p);
+  } else {
 	var searching = document.getElementById('searchBox');
-  var recents = document.getElementById('recent');
+  var recents = document.getElementById('recentSearch');
   if (searching.classList.contains("search")) { 
     (searching.classList.remove('search'));
     (searching.classList.add("search_found"));
     (recents.classList.remove('recent'));
-    (recents.classlist.add("recent_found"))
+    (recents.classList.add("recent_found"));
     getStarID();
   } else {
   getStarID(); 
   }
   }
+}
   
-function getStarID() {
+function getStarID(name) {
   var jsonHTTP = new XMLHttpRequest();
 	var api = 'api_key=8bd29dde4b31287cd5579e4bd90c80b3';
 	var url1 = 'https://api.themoviedb.org/3/search/person?';
 	var url2 = '&query=';
 	var callback = '&callback=person'
-	var name = encodeURIComponent(document.getElementById("starName").value);
+  if (name == null){
+	name = encodeURIComponent(document.getElementById("starName").value);}
 	var url = url1 + api + url2 + name;
 	if (localStorage.getItem("recentOne") !== null) {
 		if (localStorage.getItem("recentTwo") !== null) {
@@ -125,11 +137,6 @@ jsonHTTP.open("GET", url, true);
 jsonHTTP.onreadystatechange=function() {
    if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
    		var data = JSON.parse(jsonHTTP.responseText);
-   		//data.sort(function(a, b){
-    	//	if(a.cast.release_date < b.cast.release_date) return -1;
-    	//	if(a.cast.release_date > b.cast.release_date) return 1;
-    	//  return 0;
-		//	});
         var movieArray = data;
             for (var i = 0; i < movieArray.cast.length; i++) { 
             var movie = (movieArray.cast[i].title) || (movieArray.cast[i].name);
