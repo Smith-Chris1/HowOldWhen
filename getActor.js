@@ -22,8 +22,8 @@ document.getElementById("searchThree").innerHTML = localStorage.getItem("recentT
 
  
 document.getElementById("searchButton").onclick = function() {
+	alert(encodeURIComponent(document.getElementById("starName").value));
   if (encodeURIComponent(document.getElementById("starName").value) === null) {
-alert(encodeURIComponent(document.getElementById("starName").value));
     p = document.createElement("P");
     p.innerHTML = "you must enter a name.";
     document.getElementById('error').appendChild(p);
