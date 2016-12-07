@@ -19,8 +19,9 @@ document.getElementById("searchThree").innerHTML = localStorage.getItem("recentT
 
 document.getElementById("searchButton").onclick = function() {
 	var searching = document.getElementById('searchBox');
-  if (searching.classList.contains('search')) { 
-    (searching.classList.add('found'));
+  if (searching.classList.contains("search")) { 
+    (searching.classList.remove('search'));
+    (searching.classList.add("search_found"));
     getStarID();
   } else {
   getStarID(); 
@@ -80,18 +81,26 @@ jsonHTTP.onreadystatechange=function() {
         var milliseconds = Math.abs(new Date() - new Date(bday.replace(/-/g,'/')));
         var age = Math.floor(milliseconds / 31536000000);
         var imageBox = document.createElement('IMG');
+        imageBox.className = 'star1';
         imageBox.setAttribute('src', pic);
-        imageBox.className = 'star';
-     if (document.getElementById('searchBox').classList.contains('search found')) { 
-    document.getElementById('starImage').replaceChild(imageBox);
+        imageBox.setAttribute('id', 'strimg');
+        var description = document.createElement("P");
+        var l1 = document.createTextNode(name + " is " + age + " years old.");
+        description.className = "bio";
+        description.setAttribute('id', 'bio')
+        description.appendChild(l1);
+     	  var searching = document.getElementsByClassName('star1');
+        if (searching.length > 0) { 
+            imageBox.className = 'star1';
+            var oldIMG = document.getElementById("strimg");
+            var oldDesc = document.getElementById('bio');
+          document.getElementById('results').innerHTML = "";
+          document.getElementById('starImage').replaceChild(imageBox,oldIMG);
+          document.getElementById('nameAge').replaceChild(description, oldDesc);
   } else {
   	 document.getElementById('starImage').appendChild(imageBox);
+     document.getElementById('nameAge').appendChild(description);
   } 
-    var description = document.createElement("P");
-    var l1 = document.createTextNode(name + " is " + age + " years old.");
-    description.className = "bio";
-    description.appendChild(l1);
-    document.getElementById('nameAge').appendChild(description);
     var resultsAdd = document.createElement("DIV");
     resultsAdd.className = "results";
     resultsAdd.setAttribute('id','results');
