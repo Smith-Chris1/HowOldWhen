@@ -19,9 +19,12 @@ document.getElementById("searchThree").innerHTML = localStorage.getItem("recentT
 
 document.getElementById("searchButton").onclick = function() {
 	var searching = document.getElementById('searchBox');
+  var recents = document.getElementById('recent');
   if (searching.classList.contains("search")) { 
     (searching.classList.remove('search'));
     (searching.classList.add("search_found"));
+    (recents.classList.remove('recent'));
+    (recents.classlist.add("recent_found"))
     getStarID();
   } else {
   getStarID(); 
@@ -113,7 +116,7 @@ jsonHTTP.send();
 
 function getMovieList(id,bday) {
   var jsonHTTP = new XMLHttpRequest();
-	var api = '/movie_credits?api_key=8bd29dde4b31287cd5579e4bd90c80b3&language=en-US';
+	var api = '/combined_credits?api_key=8bd29dde4b31287cd5579e4bd90c80b3&language=en-US';
 	var url1 = 'https://api.themoviedb.org/3/person/';
 	var url = url1 + id + api
 
@@ -129,13 +132,11 @@ jsonHTTP.onreadystatechange=function() {
 		//	});
         var movieArray = data;
             for (var i = 0; i < movieArray.cast.length; i++) { 
-            var movie = (movieArray.cast[i].title);
-            var releaseDate;
-            if (movieArray.cast[i].release_date == null){
+            var movie = (movieArray.cast[i].title) || (movieArray.cast[i].name);
+            var releaseDate = (movieArray.cast[i].release_date) || (movieArray.cast[i].first_air_date);
+            if (releaseDate == null){ 
             releaseDate = '?';
-           } else {
-           releaseDate = (movieArray.cast[i].release_date);
-            }
+           }
             var poster;
             if (movieArray.cast[i].poster_path == null) {
             	poster = '?';
