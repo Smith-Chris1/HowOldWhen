@@ -151,7 +151,7 @@ data.sort(function(a,b) {
         return 1;
 
 });
-	   console.log(data);
+	   data.reverse();
         var movieArray = data;
             for (var i = 0; i < movieArray.length; i++) { 
             var movie = (movieArray[i].title) || (movieArray[i].name);
