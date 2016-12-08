@@ -122,10 +122,10 @@ jsonHTTP.onreadystatechange=function() {
   	 document.getElementById('starImage').appendChild(imageBox);
      document.getElementById('nameAge').appendChild(description);
   } 
-    var resultsAdd = document.createElement("DIV");
-    resultsAdd.className = "results";
-    resultsAdd.setAttribute('id','results');
-    document.getElementById('gradient').appendChild(resultsAdd);
+    //var resultsAdd = document.createElement("DIV");
+    //resultsAdd.className = "results";
+    //resultsAdd.setAttribute('id','results');
+    //document.getElementById('gradient').appendChild(resultsAdd);
     getMovieList(id,bday)
 }
 }
