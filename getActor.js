@@ -144,7 +144,7 @@ jsonHTTP.onreadystatechange=function() {
    if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
    		var data = JSON.parse(jsonHTTP.responseText);
 	   data.sort(function(a, b) {
-    return parseFloat(a.release_date) - parseFloat(b.release_date);
+    return parseFloat(a.cast.release_date) - parseFloat(b.cast.release_date);
 });
         var movieArray = data;
             for (var i = 0; i < movieArray.cast.length; i++) { 
