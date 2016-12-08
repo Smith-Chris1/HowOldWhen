@@ -9,6 +9,14 @@ document.getElementById("searchOne").addEventListener("click", function() {
     getStarID(localStorage.getItem('recentOne')); 
 }, false);
 
+document.getElementById("searchTwo").addEventListener("click", function() {
+    getStarID(localStorage.getItem('recentTwo')); 
+}, false);
+
+document.getElementById("searchThree").addEventListener("click", function() {
+    getStarID(localStorage.getItem('recentThree')); 
+}, false);
+
 if (typeof(Storage) !== "undefined") {
   if (localStorage.getItem("recentOne") === null)  {
   localStorage.setItem('recentOne',"Please search for a star.") 
@@ -22,24 +30,15 @@ document.getElementById("searchThree").innerHTML = localStorage.getItem("recentT
 
  
 document.getElementById("searchButton").onclick = function() {
-  if (encodeURIComponent(document.getElementById("starName").value) === '') {
+  if (encodeURIComponent(document.getElementById("starName").value) === '' || null) {
     p = document.createElement("P");
     p.innerHTML = "you must enter a name.";
     document.getElementById('error').appendChild(p);
   } else {
-	var searching = document.getElementById('searchBox');
-  var recents = document.getElementById('recentSearch');
-  if (searching.classList.contains("search")) { 
-    (searching.classList.remove('search'));
-    (searching.classList.add("search_found"));
-    (recents.classList.remove('recent'));
-    (recents.classList.add("recent_found"));
-    getStarID();
-  } else {
   getStarID(); 
   }
   }
-}
+
   
 function getStarID(name) {
   var jsonHTTP = new XMLHttpRequest();
@@ -48,8 +47,15 @@ function getStarID(name) {
 	var url2 = '&query=';
 	var callback = '&callback=person'
   if (name == null){
-	name = encodeURIComponent(document.getElementById("starName").value);}
-	var url = url1 + api + url2 + name;
+	var name = document.getElementById("starName").value; }
+  	var searching = document.getElementById('searchBox');
+  var recents = document.getElementById('recentSearch');
+  if (searching.classList.contains("search")) { 
+    (searching.classList.remove('search'));
+    (searching.classList.add("search_found"));
+    (recents.classList.remove('recent'));
+    (recents.classList.add("recent_found"));
+  }
 	if (localStorage.getItem("recentOne") !== null) {
 		if (localStorage.getItem("recentTwo") !== null) {
 			localStorage.setItem('recentThree',localStorage.getItem('recentTwo'));
@@ -62,9 +68,12 @@ function getStarID(name) {
       	localStorage.setItem('recentOne',document.getElementById("starName").value);
   		document.getElementById("searchOne").innerHTML = localStorage.getItem("recentOne")
     } 
-	localStorage.setItem('recentOne',document.getElementById("starName").value);
+	localStorage.setItem('recentOne',name);
   	document.getElementById("searchOne").innerHTML = localStorage.getItem("recentOne")}
-
+  console.log(name);
+name.replace(/\s+/g, '+');
+  console.log(name);
+  	var url = url1 + api + url2 + name;
 jsonHTTP.open("GET", url, true);
 
 jsonHTTP.onreadystatechange=function() {
@@ -172,6 +181,7 @@ function display(title,releaseDate,bday,poster) {
     div.className = 'gridRow'
     div.setAttribute('id','gridRow');
     p = document.createElement("P");
+    p.className = 'gridRowText';
     imageBox.className = 'poster';
     if (poster == '?') {
     imageBox.setAttribute('src', missingPoster);    

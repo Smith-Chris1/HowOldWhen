@@ -3,11 +3,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
 
-}
-.search{
-  opacity:1;
-}
+
 .search_found {
     position: absolute;
   top: 50%;
@@ -19,7 +17,6 @@
   -o-transition: 1s;
   transition: 1s;
   top: 18% !important;
-
 }
 
 
@@ -36,7 +33,6 @@
   margin-top:53px;
   left: 50%;
   transform: translate(-50%, -50%);
-
   }
 
  .star1 {
@@ -52,13 +48,13 @@
 }
 .poster{
   position: relative;
-  top: 50%;
-  left: 50%;
+  //top: 50%;
+  //left: 50%;
   height: 200px;
   width: auto;
   vertical-align:middle;
-  display:inline-block;
-
+  //display:inline-block;
+    opacity: 1;
   transition: opacity 2s ease-in-out;
   -moz-transition: opacity 2s ease-in-out;
   -webkit-transition: opacity 2s ease-in-out;
@@ -94,23 +90,35 @@ background-repeat: no-repeat;
 background-size: cover;
 }
 
-.nameAge{
+.nameAge {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
   
-.gridRow{
+.gridRow {
   width: 210px;
   display: inline-block;
   text-align: center;
+  z-index:-1;
+}
+.gridRow:hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
 
+.gridRowText{
+  width:auto;
+  z-index:1;
+  position:relative;
+  font-stretch:condensed;
+  font-style:oblique;
+  font-weight:bold;
 }
 
 
-.results{
+.results {
   margin-top:200px;
   padding-top:10px;
   padding-bottom:500px;
@@ -122,7 +130,6 @@ background-size: cover;
   overflow-y: auto;
   background-color: rgba(0,0,0,.7);
   box-shadow: 10px 0px 60px rgba(0,0,0,.6);
-
 }
 
 .results::-webkit-scrollbar { 
@@ -134,14 +141,16 @@ background-size: cover;
   border: solid 5px #FFAE00;
   transition: border 0.3s;
   background-color: #19191b
-  font-family:'Open Sans',sans-serif;font-size:14px;font-weight:400;
+  font-family:'Open Sans',sans-serif;font-      size:14px;font-weight:400;
   color: grey;
-
+  border-radius:20px;
 }
 .style-2 input[type="text"]:focus,
 .style-2 input[type="text"].focus {
   border: solid 5px #FFAE00;
+  border-radius:20px;
 }
+
 
 .go {
 
@@ -151,13 +160,17 @@ border: none;
     text-decoration: none;
     display: inline-block;
     font-family:'Open Sans',sans-serif;font-size:14px;font-weight:400;
-    margin: 4px 2px;
+    margin: 8px 10px;
     width: 40px;
-    height: 47px;
-    border-radius: 4px;
+    height: 40px;
+    border-radius: 15px;
     background-color: #0DA1C0;
-
 }
+.go:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 .nameAge {
 margin-top:80px;
 margin-left:30px;
@@ -165,7 +178,6 @@ margin-left:30px;
     position: fixed;
   top: 50%;
   left: 50%;
-
 }
 
 .overlay {
@@ -179,7 +191,6 @@ margin-left:30px;
     background-color: rgba(0,0,0, 0.9);
     overflow-x: hidden;
     transition: 0.5s;
-
 }
 
 .overlay-content {
@@ -187,7 +198,6 @@ margin-left:30px;
     top: 15%;
     width: 100%;
     text-align: center;
-
 }
 
 .overlay a {
@@ -197,7 +207,6 @@ margin-left:30px;
     color: #818181;
     display: block;
     transition: 0.3s;
-
 }
 
 .overlay a:hover, .overlay a:focus {
@@ -214,7 +223,6 @@ margin-left:30px;
 .overlay p {
   margin-left:10px;
   margin-right:10px;
-
 }
 
 @media screen and (max-height: 450px) {
@@ -248,17 +256,11 @@ color: white;
   transform: translate(-50%, -50%);
   background-color: rgba(0,0,0,.7);
   box-shadow: 10px 0px 60px rgba(0,0,0,.6);
-  font-size:15px;
-  transition:font-size 1s linear;
+  transition: 0.3s;
   display:block;
-
 }
 
-.recent p:hover, .recent p:focus {
-  color: #f1f1f1;
-  font-size:18px;
 
-}
 
 .recent_found {
   border-radius:10px;
@@ -276,12 +278,39 @@ color: white;
   -moz-transition: 1s;
   -ms-transition: 1s;
   -o-transition: 1s;
-  font-size:15;
-  transition:font-size 1s linear;
+  transition: 1s;
   top: 120% !important;
-
 }
 
+.searchOneClass{
+  text-align:center;
+  font-size:15px;
+}
+.searchOneClass:hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  color:white;
+}
+
+.searchTwoClass{
+  text-align:center;
+  font-size:15px;
+}
+.searchTwoClass:hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  color:white;
+}
+
+.searchThreeClass{
+  text-align:center;
+  font-size:15px;
+}
+.searchThreeClass:hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  color:white;
+}
 .begin {
   text-align: center;
   margin-top: -120px;
@@ -294,7 +323,7 @@ color: white;
     color: #818181;
 }
 
-.error p{
+.error {
   text-align: center;
   margin-top: -120px;
   font-size:18px;
@@ -304,6 +333,7 @@ color: white;
   transform: translate(-50%, -50%);
   animation: fadeInOut 5s;
   animation-fill-mode:forwards;
+  z-index:1;
 
 }
 @keyframes fadeInOut {
@@ -312,3 +342,4 @@ color: white;
     75%  {opacity: 1;}
     100% {opacity: 0;}
 }
+
