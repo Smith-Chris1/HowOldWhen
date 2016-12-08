@@ -1,28 +1,33 @@
 .search {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 90%;
+  margin:50% auto;
+  padding: 40px;
+  height:60%;
 }
 
-
 .search_found {
-    position: absolute;
-  top: 50%;
-  left: 60%;
-  transform: translate(-50%, -50%);
+  width: 400px;
+  margin:10px auto;
+  padding: 10px;
+  margin-right:50px;
+  height:100px;
+  float:right;
+
   -webkit-transition: 1s;
   -moz-transition: 1s;
   -ms-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
-  top: 12% !important;
-}
 
+}
 
 .circle {
   width: 100px;
   height: 100px;
+  display:inline-block;
+  float:left;
+  margin-left:-60px;
+  margin-top:-35px;
     position: relative;
     overflow: hidden;
     -webkit-border-radius: 50%;
@@ -30,11 +35,67 @@
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     border-radius: 50%;
-  margin-top:53px;
-  left: 50%;
   transform: translate(-50%, -50%);
   }
 
+ input[type="text"] {
+  padding: 10px;
+  border: solid 3px #FFAE00;
+  transition: border 0.3s;
+  background-color: #19191b
+  font-family:'Open Sans',sans-serif;font-size:14px;font-weight:400;
+  color: grey;
+  border-radius:20px;
+  width:60%;
+  display:inline-block;
+}
+.style-2 input[type="text"]:focus,
+.style-2 input[type="text"].focus {
+  border: solid 3px #FFAE00;
+  border-radius:20px;
+}
+
+.search1 {
+  display:inline-block;
+  height:10px;
+  float:left;
+  width:80%;
+}
+
+.go {
+
+border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family:'Open Sans',sans-serif;font-size:14px;font-weight:400;
+    margin: 8px 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    background-color: #0DA1C0;
+    display:inline-block;
+}
+.go:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.bio {
+  display:inline-block;
+  margin-top: -10px;
+  margin-left:-30px;
+  float:left;
+
+}
+.nameAge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 20px;
+}
  .star1 {
        text-align: center;
     display: inline;
@@ -45,13 +106,6 @@
   transition: opacity 2s ease-in-out;
   -moz-transition: opacity 2s ease-in-out;
   -webkit-transition: opacity 2s ease-in-out;
-}
-
-.bio {
-
-  margin-top: -90px;
-  margin-right:40px;
-
 }
 
 .poster{
@@ -98,14 +152,6 @@ background-repeat: no-repeat;
 background-size: cover;
 }
 
-.nameAge {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding-top: 20px;
-}
-  
 .gridRow {
   width: 210px;
   display: inline-block;
@@ -128,7 +174,7 @@ background-size: cover;
 
 .fluid-wrap {
   width: 90%;
-    margin: 90px auto;
+    margin:90px auto;
     padding: 40px;
     height:60%;
 }
@@ -141,45 +187,11 @@ float:right;
   overflow-y: scroll;
   background-color: rgba(0,0,0,.7);
   box-shadow: 0px 0px 50px rgba(0,0,0,1);
+    border-radius:10px;
 }
 
 .results::-webkit-scrollbar { 
   display: none;
-}
-
- input[type="text"] {
-  padding: 10px;
-  border: solid 5px #FFAE00;
-  transition: border 0.3s;
-  background-color: #19191b
-  font-family:'Open Sans',sans-serif;font-      size:14px;font-weight:400;
-  color: grey;
-  border-radius:20px;
-}
-.style-2 input[type="text"]:focus,
-.style-2 input[type="text"].focus {
-  border: solid 5px #FFAE00;
-  border-radius:20px;
-}
-
-
-.go {
-
-border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-family:'Open Sans',sans-serif;font-size:14px;font-weight:400;
-    margin: 8px 10px;
-    width: 40px;
-    height: 40px;
-    border-radius: 15px;
-    background-color: #0DA1C0;
-}
-.go:hover {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
 }
 
 .nameAge {

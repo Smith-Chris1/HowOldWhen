@@ -3,6 +3,7 @@
 	<link rel="stylesheet" type="text/css"href="../HowOldWhen/style.css">
 </head>
 <body>
+<h1 class = begin>how old was that actor was in that movie?</h1>
 <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
@@ -20,11 +21,13 @@
 <div class = 'gradient' id = 'gradient'>
 <span class = 'span' style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 <div class = 'search' id = 'searchBox'>
-  <h1 class = begin>how old was that actor was in that movie?</h1>
-<p><input type="text" placeholder="search for an actor..." class="focus" id="starName"></input><button id ='searchButton' button class="go">go</button></p>
+<div class = 'search1' id = 'searchBox1'>
+<p><input type="text" placeholder="search for an actor..." class="focus" id="starName" onkeydown = "if (event.keyCode == 13)
+                        document.getElementById('searchButton').click()"></input><button id ='searchButton' button class="go">go</button></p>
 <div id = 'starImage' class = 'circle'></div>
   <p id = 'error' class = 'error' </p>
 <p id = 'nameAge' class='nameAge'></p>
+</div>
 </div>
 <div class="fluid-wrap" id = "Fluidresults">
 </div>
@@ -40,4 +43,3 @@
 <script src="../HowOldWhen/getActor.js"></script>
 
 </body>
-
