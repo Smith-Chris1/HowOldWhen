@@ -160,7 +160,7 @@ data.sort(function(a,b) {
             releaseDate = '?';
            }
             var poster;
-            if (movieArray.cast[i].poster_path == null) {
+            if (movieArray[i].poster_path == null) {
             	poster = '?';
             } else {
             	poster = 'https://image.tmdb.org/t/p/w500/' + movieArray.cast[i].poster_path;}
