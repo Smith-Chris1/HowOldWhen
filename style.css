@@ -41,6 +41,17 @@ text-align:center;
   transform: translate(-50%, -50%);
   }
 
+@media screen and (min-width: 500px) {.circle {margin-left:0px;}
+}
+
+@media screen and (min-width: 700px) {.circle {margin-left:30px;}
+}
+
+@media screen and (min-width: 1200px) {.circle {margin-left:80px;}
+}
+
+@media screen and (min-width: 1400px) {.circle {margin-left:160px;}
+}
  input[type="text"] {
   padding: 10px;
   margin-left:50px;
@@ -191,16 +202,21 @@ background-size: cover;
     height:60%;
 }
 
+@media screen and (min-height: 200px) {.fluid-wrap {height:33%;}
+}
+
 @media screen and (min-height: 375px) {.fluid-wrap {height:43%;}
 }
 
-@media screen and (min-height: 640px) {.fluid-wrap {height:73%;}
+@media screen and (min-height: 649px) {.fluid-wrap {height:73%;}
 }
 
-@media screen and (min-height: 660px) {.fluid-wrap {height:57%;}
+@media screen and (min-height: 650px) {.fluid-wrap {height:57%;}
 }
 
 @media screen and (min-height: 730px) {.fluid-wrap {height:73%;}
+}
+@media screen and (min-height: 731px) {.fluid-wrap {height:63%;}
 }
 
 .results {
@@ -382,6 +398,15 @@ color: white;
   animation-fill-mode:forwards;
   z-index:1;
 
+}
+.searchOneClass {
+  font-size:15px;
+}
+.searchTwoClass {
+  font-size:15px;
+}
+.searchThreeClass {
+  font-size:15px;
 }
 @keyframes fadeInOut {
     0%   {opacity: 0;}
