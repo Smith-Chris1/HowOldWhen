@@ -70,9 +70,7 @@ function getStarID(name) {
     } 
 	localStorage.setItem('recentOne',name);
   	document.getElementById("searchOne").innerHTML = localStorage.getItem("recentOne")}
-  console.log(name);
-name.replace(/\s+/g, '+');
-  console.log(name);
+    name.replace(/\s+/g, '+');
   	var url = url1 + api + url2 + name;
 jsonHTTP.open("GET", url, true);
 
