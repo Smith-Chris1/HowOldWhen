@@ -144,7 +144,7 @@ jsonHTTP.onreadystatechange=function() {
    if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
    		var data = JSON.parse(jsonHTTP.responseText);
 	   data = data['cast'];
-sortArray.sort(function(a,b) {
+data.sort(function(a,b) {
     if ( a.release_date < b.release_date )
         return -1;
     if ( a.release_date > b.release_date )
