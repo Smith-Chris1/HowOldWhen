@@ -16,7 +16,7 @@
   -ms-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
-  top: 18% !important;
+  top: 25% !important;
 }
 
 
@@ -30,7 +30,7 @@
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     border-radius: 50%;
-  margin-top:53px;
+  margin-top:70px;
   left: 50%;
   transform: translate(-50%, -50%);
   }
@@ -48,12 +48,9 @@
 }
 .poster{
   position: relative;
-  //top: 50%;
-  //left: 50%;
   height: 200px;
   width: auto;
   vertical-align:middle;
-  //display:inline-block;
     opacity: 1;
   transition: opacity 2s ease-in-out;
   -moz-transition: opacity 2s ease-in-out;
@@ -95,7 +92,7 @@ background-size: cover;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding-top: 20px;
+  padding-top:20px
 }
   
 .gridRow {
@@ -118,21 +115,17 @@ background-size: cover;
   font-weight:bold;
 }
 
-.fluid-wrap {
-  width: 70%;
-    margin: 90px auto;
-    padding: 20px;
-    height:60%;
-
-}
 
 .results {
-position:relative;
-text-align:center;
-padding:10px;
-height:100%;
-  float:right;
-  overflow-y: scroll;
+  margin-top:225px;
+  padding-top:10px;
+  padding-bottom:300px;
+  width:660px;
+  height:200px;
+  left:50%;
+  position:relative;
+  transform:translate(-50%, 0%);
+  overflow-y: auto;
   background-color: rgba(0,0,0,.7);
   box-shadow: 10px 0px 60px rgba(0,0,0,.6);
 }
@@ -279,14 +272,15 @@ color: white;
   top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
-    background-color: rgba(0,0,0,.7);
+  background-color: rgba(0,0,0,.7);
   box-shadow: 10px 0px 60px rgba(0,0,0,.6);
   -webkit-transition: 1s;
   -moz-transition: 1s;
   -ms-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
-  top: 120% !important;
+  top: 25% !important;
+  margin-left:250px;
 }
 
 .searchOneClass{
