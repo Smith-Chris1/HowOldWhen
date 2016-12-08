@@ -153,9 +153,9 @@ data.sort(function(a,b) {
 });
 	   console.log(data);
         var movieArray = data;
-            for (var i = 0; i < movieArray.cast.length; i++) { 
-            var movie = (movieArray.cast[i].title) || (movieArray.cast[i].name);
-            var releaseDate = (movieArray.cast[i].release_date) || (movieArray.cast[i].first_air_date);
+            for (var i = 0; i < movieArray.Array.length; i++) { 
+            var movie = (movieArray.Array[i].title) || (movieArray.Array[i].name);
+            var releaseDate = (movieArray.Array[i].release_date) || (movieArray.Array[i].first_air_date);
             if (releaseDate == null){ 
             releaseDate = '?';
            }
