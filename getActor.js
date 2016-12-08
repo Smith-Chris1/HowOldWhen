@@ -163,7 +163,7 @@ data.sort(function(a,b) {
             if (movieArray[i].poster_path == null) {
             	poster = '?';
             } else {
-            	poster = 'https://image.tmdb.org/t/p/w500/' + movieArray.cast[i].poster_path;}
+            	poster = 'https://image.tmdb.org/t/p/w500/' + movieArray[i].poster_path;}
             display(movie, releaseDate, bday, poster)
 }
   }
