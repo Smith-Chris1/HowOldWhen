@@ -1,19 +1,21 @@
 .search {
-  width: 400px;
-  margin:200px auto;
-  padding: 10px;
-  margin-right:50px;
-  height:100px;
-  float:right;
-}
-
-.search_found {
-  width: 400px;
+  width: 80%;
   margin:10px auto;
   padding: 10px;
   margin-right:50px;
   height:100px;
   float:right;
+  text-align:center;
+}
+
+.search_found {
+  width: 80%;
+  margin:10px auto;
+  padding: 10px;
+  margin-right:50px;
+  height:100px;
+  float:right;
+text-align:center;
 
   -webkit-transition: 1s;
   -moz-transition: 1s;
@@ -28,7 +30,7 @@
   height: 100px;
   display:inline-block;
   float:left;
-  margin-left:-60px;
+  margin-left:40px;
   margin-top:-35px;
     position: relative;
     overflow: hidden;
@@ -62,6 +64,28 @@
   height:10px;
   float:left;
   width:80%;
+  text-align:center;
+}
+
+.bio {
+  display:inline-block;
+  margin-top: -10px;
+  margin-left:-30px;
+  float:left;
+  text-align:center;
+
+}
+
+.nameAge {
+ width: 80%;
+ height:10px;
+  margin:10px auto;
+  padding: 10px;
+  margin-right:50px;
+  height:100px;
+  float:right;
+text-align:center;
+
 }
 
 .go {
@@ -84,21 +108,7 @@ border: none;
   transform: scale(1.1);
 }
 
-.bio {
-  display:inline-block;
-  margin-top: -10px;
-  margin-left:-30px;
-  float:left;
-
-}
-.nameAge {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding-top: 20px;
-}
- .star1 {
+.star1 {
        text-align: center;
     display: inline;
   margin-top: -30px;

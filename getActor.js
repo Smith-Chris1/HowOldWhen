@@ -117,10 +117,10 @@ jsonHTTP.onreadystatechange=function() {
             var oldDesc = document.getElementById('bio');
           document.getElementById('results').innerHTML = "";
           document.getElementById('starImage').replaceChild(imageBox,oldIMG);
-          document.getElementById('nameAge').replaceChild(description, oldDesc);
+          document.getElementById('starImage').replaceChild(description, oldDesc);
   } else {
   	 document.getElementById('starImage').appendChild(imageBox);
-     document.getElementById('nameAge').appendChild(description);
+     document.getElementById('starImage').appendChild(description);
   } 
     var resultsAdd = document.createElement("DIV");
     resultsAdd.className = "results";
