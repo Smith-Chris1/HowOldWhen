@@ -181,6 +181,40 @@ background-size: cover;
   text-align: center;
   z-index:-1;
 }
+
+@media screen and (min-width: 200px) {.poster {height:550px;}
+}
+
+@media screen and (min-width: 375px) {.poster {height:500px;}
+}
+
+@media screen and (min-width: 649px) {.poster {height:450px;}
+}
+
+@media screen and (min-width: 650px) {.poster {height:400px;}
+}
+
+@media screen and (min-width: 730px) {.poster {height:350px;}
+}
+@media screen and (min-width: 731px) {.poster {height:300px;}
+}
+
+@media screen and (min-width: 200px) {.gridRow {width:550px;}
+}
+
+@media screen and (min-width: 375px) {.gridRow {width:500px;}
+}
+
+@media screen and (min-width: 649px) {.gridRow {width:450px;}
+}
+
+@media screen and (min-width: 650px) {.gridRow {width:400px;}
+}
+
+@media screen and (min-width: 730px) {.gridRow {width:350px;}
+}
+@media screen and (min-width: 731px) {.gridRow {width:300px;}
+}
 .gridRow:hover{
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
@@ -193,6 +227,23 @@ background-size: cover;
   font-stretch:condensed;
   font-style:oblique;
   font-weight:bold;
+}
+
+@media screen and (min-width: 200px) {.gridRowText {width:550px; transform: scale(2);}
+}
+
+@media screen and (min-width: 375px) {.gridRowText {width:500px;}
+}
+
+@media screen and (min-width: 649px) {.gridRowText {width:450px;}
+}
+
+@media screen and (min-width: 650px) {.gridRowText {width:400px;}
+}
+
+@media screen and (min-width: 730px) {.gridRowText {width:350px;}
+}
+@media screen and (min-width: 731px) {.gridRowText {width:300px;}
 }
 
 .fluid-wrap {
