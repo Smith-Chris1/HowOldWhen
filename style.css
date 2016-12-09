@@ -41,6 +41,8 @@ text-align:center;
   transform: translate(-50%, -50%);
   }
 
+@media screen and (min-width: 360px) {.circle {left:-100px;margin-right:-90px;}
+}
 @media screen and (min-width: 500px) {.circle {margin-left:0px;}
 }
 
@@ -51,6 +53,8 @@ text-align:center;
 }
 
 @media screen and (min-width: 1400px) {.circle {margin-left:160px;}
+}
+@media screen and (max-width: 1920px) {.circle {margin-left:120px;}
 }
  input[type="text"] {
   padding: 10px;
