@@ -89,8 +89,9 @@ jsonHTTP.onreadystatechange=function() {
     (searching.classList.add("search_found"));
     (recents.classList.remove('recent'));
     (recents.classList.add("recent_found"));
-  }
+  } 
 	if (localStorage.getItem("recentOne") !== null) {
+		var temp1 = localStorage.getItem("recentOne")
 		if (localStorage.getItem("recentTwo") !== null) {
 			localStorage.setItem('recentThree',localStorage.getItem('recentTwo'));
       localStorage.setItem('recentTwo', localStorage.getItem('recentOne'));
@@ -101,7 +102,10 @@ jsonHTTP.onreadystatechange=function() {
     	document.getElementById("searchTwo").innerHTML = localStorage.getItem("recentTwo");
       	localStorage.setItem('recentOne',document.getElementById("starName").value);
   		document.getElementById("searchOne").innerHTML = localStorage.getItem("recentOne")
-    } 
+    }
+    if (temp1 === localStorage.getItem("recentOne")) {
+    	localStorage.setItem('recentOne', temp1)
+    }
 	localStorage.setItem('recentOne',name);
   	document.getElementById("searchOne").innerHTML = localStorage.getItem("recentOne")}
 
