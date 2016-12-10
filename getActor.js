@@ -62,7 +62,7 @@ jsonHTTP.onreadystatechange=function() {
    	  var data = JSON.parse(jsonHTTP.responseText);
    	  var results = data.total_results;
    	  console.log(results);
-   	  if (results === 0) {
+   	  if (results === "0") {
    	  	p = document.createElement("P");
     p.innerHTML = "I couldn't find anyone with that name, are you sure you spelled it right?";
     p.setAttribute('id', 'errorMessage');
