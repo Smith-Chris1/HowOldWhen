@@ -38,10 +38,10 @@ document.getElementById("searchButton").onclick = function() {
     if (errorExists !== null ) {
     	document.getElementById('error_found').className = 'error';
     	 errorExists.parentNode.removeChild(errorExists);
-    	 document.getElementById('error').className = 'error_hidden';
+    	 document.getElementById('error').className = 'error_found';
     }
     document.getElementById('error').appendChild(p);
-    document.getElementById('error').className = 'error_hidden';
+    document.getElementById('error').className = 'error_found';
   } else {
   getStarID(); 
   }
