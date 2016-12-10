@@ -90,7 +90,7 @@ jsonHTTP.onreadystatechange=function() {
     (recents.classList.remove('recent'));
     (recents.classList.add("recent_found"));
   } 
-	var temp1 = document.getElementById("searchOne");
+	var temp1 = localStorage.getItem("recentOne");
 
     if (temp1 === localStorage.getItem("recentOne")) {
     	console.log(temp1);
