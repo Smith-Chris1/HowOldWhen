@@ -90,7 +90,11 @@ jsonHTTP.onreadystatechange=function() {
     (recents.classList.remove('recent'));
     (recents.classList.add("recent_found"));
   } 
-	if (localStorage.getItem("recentOne") !== null) {
+	
+    if (temp1 === localStorage.getItem("recentOne")) {
+    	localStorage.setItem('recentOne', temp1)
+    } else {
+    	if (localStorage.getItem("recentOne") !== null) {
 		var temp1 = localStorage.getItem("recentOne")
 		if (localStorage.getItem("recentTwo") !== null) {
 			localStorage.setItem('recentThree',localStorage.getItem('recentTwo'));
@@ -103,8 +107,6 @@ jsonHTTP.onreadystatechange=function() {
       	localStorage.setItem('recentOne',document.getElementById("starName").value);
   		document.getElementById("searchOne").innerHTML = localStorage.getItem("recentOne")
     }
-    if (temp1 === localStorage.getItem("recentOne")) {
-    	localStorage.setItem('recentOne', temp1)
     }
 	localStorage.setItem('recentOne',name);
   	document.getElementById("searchOne").innerHTML = localStorage.getItem("recentOne")}
