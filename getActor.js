@@ -35,15 +35,11 @@ document.getElementById("searchButton").onclick = function() {
     p.innerHTML = "you must enter a name.";
     p.setAttribute('id', 'errorMessage');
     var errorExists = document.getElementById("errorMessage");
-    if (errorExists !== null ) {
-    	document.getElementById('error').className = 'error';
-    	 errorExists.parentNode.removeChild(errorExists);
-    	 setTimeout(function(){
-    document.getElementById('error_found').className = 'error';
-}, 2500);
-    }
     document.getElementById('error').appendChild(p);
     document.getElementById('error').className = 'error_found';
+    setTimeout(function(){
+    errorExists.parentNode.removeChild(errorExists);
+}, 2500);
   } else {
   getStarID(); 
   }
