@@ -91,8 +91,9 @@ jsonHTTP.onreadystatechange=function() {
     (recents.classList.add("recent_found"));
   } 
 	var temp1 = localStorage.getItem("recentOne");
-	console.log(temp1);
+
     if (temp1 === localStorage.getItem("recentOne")) {
+    	console.log(temp1);
     	localStorage.setItem('recentOne', temp1);
     } else {
     	if (localStorage.getItem("recentOne") !== null) {
