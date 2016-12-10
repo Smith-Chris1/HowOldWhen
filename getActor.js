@@ -55,6 +55,7 @@ function getStarID(name) {
 	var callback = '&callback=person'
   if (name == null){
 	var name = document.getElementById("starName").value; }
+	name.replace(/\s+/g, '+');
   	var url = url1 + api + url2 + name;
 jsonHTTP.open("GET", url, true);
 
@@ -76,7 +77,7 @@ jsonHTTP.onreadystatechange=function() {
     errorExists.parentNode.removeChild(errorExists);
     document.getElementById('error').className = 'error';
 }, 5000);
-   	  } else{ 
+   	  } else{
   	var searching = document.getElementById('searchBox');
   var recents = document.getElementById('recentSearch');
   if (searching.classList.contains("search")) { 
@@ -99,7 +100,6 @@ jsonHTTP.onreadystatechange=function() {
     } 
 	localStorage.setItem('recentOne',name);
   	document.getElementById("searchOne").innerHTML = localStorage.getItem("recentOne")}
-    name.replace(/\s+/g, '+');
 
       var id = data.results[0].id;
       var name = data.results[0].name;
