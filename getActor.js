@@ -83,7 +83,20 @@ jsonHTTP.open("GET", url, true);
 
 jsonHTTP.onreadystatechange=function() {
    if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
-   		var data = JSON.parse(jsonHTTP.responseText);
+   	  var data = JSON.parse(jsonHTTP.responseText);
+   	  //var results = data.results[0].total_results;
+   	  if (data.results[0].total_results === '0') {
+   	  	p = document.createElement("P");
+    p.innerHTML = "I couldn't find anyone with that name, are you sure you spelled it right?";
+    p.setAttribute('id', 'errorMessage');
+    document.getElementById('error').appendChild(p);
+    document.getElementById('error').className = 'error_found';
+    var errorExists = document.getElementById("errorMessage");
+    setTimeout(function(){
+    errorExists.parentNode.removeChild(errorExists);
+    document.getElementById('error').className = 'error';
+}, 5000);
+   	  }
       var id = data.results[0].id;
       var name = data.results[0].name;
       var pic = 'https://image.tmdb.org/t/p/w500/' + data.results[0].profile_path;  
