@@ -107,8 +107,9 @@ jsonHTTP.onreadystatechange=function() {
   		document.getElementById("searchOne").innerHTML = localStorage.getItem("recentOne")
     }
     }
+}
 	localStorage.setItem('recentOne',name);
-  	document.getElementById("searchOne").innerHTML = localStorage.getItem("recentOne")}
+  	document.getElementById("searchOne").innerHTML = localStorage.getItem("recentOne")
 
 
   }
