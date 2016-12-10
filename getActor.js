@@ -92,7 +92,7 @@ jsonHTTP.onreadystatechange=function() {
   } 
 	var temp1 = localStorage.getItem("recentOne");
 
-    if (temp1 === localStorage.getItem("recentOne")) {
+    if (temp1 === name) {
     	console.log(temp1);
     	localStorage.setItem('recentOne', temp1);
     } else {
