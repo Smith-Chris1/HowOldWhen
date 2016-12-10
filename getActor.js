@@ -39,6 +39,7 @@ document.getElementById("searchButton").onclick = function() {
     var errorExists = document.getElementById("errorMessage");
     setTimeout(function(){
     errorExists.parentNode.removeChild(errorExists);
+    document.getElementById('error').className = 'error';
 }, 2500);
   } else {
   getStarID(); 
