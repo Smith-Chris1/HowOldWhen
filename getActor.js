@@ -84,7 +84,7 @@ jsonHTTP.open("GET", url, true);
 jsonHTTP.onreadystatechange=function() {
    if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
    	  var data = JSON.parse(jsonHTTP.responseText);
-   	  var results = data.results[0].total_results;
+   	  var results = data.total_results[0];
    	  if (results === '0') {
    	  	p = document.createElement("P");
     p.innerHTML = "I couldn't find anyone with that name, are you sure you spelled it right?";
