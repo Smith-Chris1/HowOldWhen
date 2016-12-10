@@ -34,8 +34,8 @@ document.getElementById("searchButton").onclick = function() {
     p = document.createElement("P");
     p.innerHTML = "you must enter a name.";
     p.setAttribute = ('id', 'errorMessage');
-    if (document.getElementById("find-me") === true ) {
-    	 document.getElementById("error").removeChild(p)
+    if (document.getElementById("errorMessage") === true ) {
+    	 document.getElementById("error").removeChild(p);
     }
     document.getElementById('error').appendChild(p);
   } else {
