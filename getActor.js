@@ -66,7 +66,7 @@ jsonHTTP.onreadystatechange=function() {
    	  console.log(url);
    	  console.log(data);
    	  console.log(results);
-   	  if (results === "0") {
+   	  if (results === 0) {
    	  	p = document.createElement("P");
     p.innerHTML = "I couldn't find anyone with that name, are you sure you spelled it right?";
     p.setAttribute('id', 'errorMessage');
