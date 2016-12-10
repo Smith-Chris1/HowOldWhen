@@ -53,7 +53,8 @@ function getStarID(name) {
 	var url1 = 'https://api.themoviedb.org/3/search/person?';
 	var url2 = '&query=';
 	var callback = '&callback=person'
-  
+  if (name == null){
+	var name = document.getElementById("starName").value; }
   	var url = url1 + api + url2 + name;
 jsonHTTP.open("GET", url, true);
 
@@ -76,8 +77,6 @@ jsonHTTP.onreadystatechange=function() {
     document.getElementById('error').className = 'error';
 }, 5000);
    	  } else{ 
-   	  if (name == null){
-	var name = document.getElementById("starName").value; }
   	var searching = document.getElementById('searchBox');
   var recents = document.getElementById('recentSearch');
   if (searching.classList.contains("search")) { 
