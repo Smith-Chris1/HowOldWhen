@@ -78,6 +78,10 @@ jsonHTTP.onreadystatechange=function() {
     document.getElementById('error').className = 'error';
 }, 5000);
    	  } else{
+   	  var id = data.results[0].id;
+      var name = data.results[0].name;
+      var pic = 'https://image.tmdb.org/t/p/w500/' + data.results[0].profile_path;  
+      getStarBday(id, name, pic);
   	var searching = document.getElementById('searchBox');
   var recents = document.getElementById('recentSearch');
   if (searching.classList.contains("search")) { 
@@ -101,10 +105,7 @@ jsonHTTP.onreadystatechange=function() {
 	localStorage.setItem('recentOne',name);
   	document.getElementById("searchOne").innerHTML = localStorage.getItem("recentOne")}
 
-      var id = data.results[0].id;
-      var name = data.results[0].name;
-      var pic = 'https://image.tmdb.org/t/p/w500/' + data.results[0].profile_path;  
-      getStarBday(id, name, pic);
+
   }
 }
 }
