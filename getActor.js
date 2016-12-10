@@ -98,12 +98,13 @@ jsonHTTP.onreadystatechange=function() {
     } 
 	localStorage.setItem('recentOne',name);
   	document.getElementById("searchOne").innerHTML = localStorage.getItem("recentOne")}
-    name.replace(/\s+/g, '+');}
+    name.replace(/\s+/g, '+');
 
       var id = data.results[0].id;
       var name = data.results[0].name;
       var pic = 'https://image.tmdb.org/t/p/w500/' + data.results[0].profile_path;  
       getStarBday(id, name, pic);
+  }
 }
 }
 jsonHTTP.send();
