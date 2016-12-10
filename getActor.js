@@ -34,9 +34,9 @@ document.getElementById("searchButton").onclick = function() {
     p = document.createElement("P");
     p.innerHTML = "you must enter a name.";
     p.setAttribute('id', 'errorMessage');
-    var errorExists = document.getElementById("errorMessage");
     document.getElementById('error').appendChild(p);
     document.getElementById('error').className = 'error_found';
+    var errorExists = document.getElementById("errorMessage");
     setTimeout(function(){
     errorExists.parentNode.removeChild(errorExists);
 }, 2500);
