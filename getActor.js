@@ -34,7 +34,8 @@ document.getElementById("searchButton").onclick = function() {
     p = document.createElement("P");
     p.innerHTML = "you must enter a name.";
     p.setAttribute('id', 'errorMessage');
-    if (document.getElementById("errorMessage") === true ) {
+    var errorExits = document.getElementById("errorMessage")
+    if (errorExits === true ) {
     	 document.getElementById("error").removeChild(p);
     }
     document.getElementById('error').appendChild(p);
