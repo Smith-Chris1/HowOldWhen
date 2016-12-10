@@ -33,7 +33,7 @@ document.getElementById("searchButton").onclick = function() {
   if (encodeURIComponent(document.getElementById("starName").value) === '' || null) {
     p = document.createElement("P");
     p.innerHTML = "you must enter a name.";
-    document.getElementById('content').appendChild(p);
+    document.getElementById('error').appendChild(p);
   } else {
   getStarID(); 
   }
