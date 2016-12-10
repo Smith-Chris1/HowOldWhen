@@ -61,6 +61,7 @@ jsonHTTP.onreadystatechange=function() {
    if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
    	  var data = JSON.parse(jsonHTTP.responseText);
    	  var results = data.total_results;
+   	  console.log(url);
    	  console.log(data);
    	  console.log(results);
    	  if (results === "0") {
