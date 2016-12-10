@@ -40,7 +40,7 @@ document.getElementById("searchButton").onclick = function() {
     setTimeout(function(){
     errorExists.parentNode.removeChild(errorExists);
     document.getElementById('error').className = 'error';
-}, 2500);
+}, 5000);
   } else {
   getStarID(); 
   }
