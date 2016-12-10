@@ -36,7 +36,7 @@ document.getElementById("searchButton").onclick = function() {
     p.setAttribute('id', 'errorMessage');
     var errorExists = document.getElementById("errorMessage");
     if (errorExists !== null ) {
-    	document.getElementById('error_found').className = 'error';
+    	document.getElementById('error').className = 'error';
     	 errorExists.parentNode.removeChild(errorExists);
     }
     document.getElementById('error').appendChild(p);
