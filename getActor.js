@@ -90,12 +90,11 @@ jsonHTTP.onreadystatechange=function() {
     (recents.classList.remove('recent'));
     (recents.classList.add("recent_found"));
   } 
-	
+	var temp1 = localStorage.getItem("recentOne");
     if (temp1 === localStorage.getItem("recentOne")) {
-    	localStorage.setItem('recentOne', temp1)
+    	localStorage.setItem('recentOne', temp1);
     } else {
     	if (localStorage.getItem("recentOne") !== null) {
-		var temp1 = localStorage.getItem("recentOne")
 		if (localStorage.getItem("recentTwo") !== null) {
 			localStorage.setItem('recentThree',localStorage.getItem('recentTwo'));
       localStorage.setItem('recentTwo', localStorage.getItem('recentOne'));
