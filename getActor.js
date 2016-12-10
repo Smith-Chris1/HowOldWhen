@@ -34,12 +34,12 @@ document.getElementById("searchButton").onclick = function() {
     p = document.createElement("P");
     p.innerHTML = "you must enter a name.";
     p.setAttribute('id', 'errorMessage');
-    var errorExits = document.getElementById("errorMessage");
-    if (errorExits !== null ) {
-    	console.log(errorExits);
-    	 errorExists.parentNode.removeChild(errorExits);
+    var errorExists = document.getElementById("errorMessage");
+    if (errorExists !== null ) {
+    	console.log(errorExists);
+    	 errorExists.parentNode.removeChild(errorExists);
     }
-    console.log(errorExits);
+    console.log(errorExists);
     document.getElementById('error').appendChild(p);
   } else {
   getStarID(); 
