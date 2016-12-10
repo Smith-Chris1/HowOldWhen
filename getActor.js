@@ -36,11 +36,12 @@ document.getElementById("searchButton").onclick = function() {
     p.setAttribute('id', 'errorMessage');
     var errorExists = document.getElementById("errorMessage");
     if (errorExists !== null ) {
-    	console.log(errorExists);
+    	document.getElementById('error_found').className = 'error';
     	 errorExists.parentNode.removeChild(errorExists);
+    	 document.getElementById('error').className = 'error_hidden';
     }
-    console.log(errorExists);
     document.getElementById('error').appendChild(p);
+    document.getElementById('error').className = 'error_hidden';
   } else {
   getStarID(); 
   }
