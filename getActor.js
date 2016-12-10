@@ -96,7 +96,6 @@ jsonHTTP.onreadystatechange=function() {
     	console.log(temp1);
     	localStorage.setItem('recentOne', temp1);
     } else {
-    	if (localStorage.getItem("recentOne") !== null) {
 		if (localStorage.getItem("recentTwo") !== null) {
 			localStorage.setItem('recentThree',localStorage.getItem('recentTwo'));
       localStorage.setItem('recentTwo', localStorage.getItem('recentOne'));
@@ -108,7 +107,7 @@ jsonHTTP.onreadystatechange=function() {
       	localStorage.setItem('recentOne',document.getElementById("starName").value);
   		document.getElementById("searchOne").innerHTML = localStorage.getItem("recentOne")
     }
-    }
+    
 }
 	localStorage.setItem('recentOne',name);
   	document.getElementById("searchOne").innerHTML = localStorage.getItem("recentOne")
