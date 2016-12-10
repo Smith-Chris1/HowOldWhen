@@ -53,7 +53,28 @@ function getStarID(name) {
 	var url1 = 'https://api.themoviedb.org/3/search/person?';
 	var url2 = '&query=';
 	var callback = '&callback=person'
-  if (name == null){
+  
+  	var url = url1 + api + url2 + name;
+jsonHTTP.open("GET", url, true);
+
+jsonHTTP.onreadystatechange=function() {
+   if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
+   	  var data = JSON.parse(jsonHTTP.responseText);
+   	  var results = data.total_results;
+   	  console.log(results);
+   	  if (results === 0) {
+   	  	p = document.createElement("P");
+    p.innerHTML = "I couldn't find anyone with that name, are you sure you spelled it right?";
+    p.setAttribute('id', 'errorMessage');
+    document.getElementById('error').appendChild(p);
+    document.getElementById('error').className = 'error_found';
+    var errorExists = document.getElementById("errorMessage");
+    setTimeout(function(){
+    errorExists.parentNode.removeChild(errorExists);
+    document.getElementById('error').className = 'error';
+}, 5000);
+   	  } else{ 
+   	  if (name == null){
 	var name = document.getElementById("starName").value; }
   	var searching = document.getElementById('searchBox');
   var recents = document.getElementById('recentSearch');
@@ -77,27 +98,8 @@ function getStarID(name) {
     } 
 	localStorage.setItem('recentOne',name);
   	document.getElementById("searchOne").innerHTML = localStorage.getItem("recentOne")}
-    name.replace(/\s+/g, '+');
-  	var url = url1 + api + url2 + name;
-jsonHTTP.open("GET", url, true);
+    name.replace(/\s+/g, '+');}
 
-jsonHTTP.onreadystatechange=function() {
-   if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
-   	  var data = JSON.parse(jsonHTTP.responseText);
-   	  var results = data.total_results;
-   	  console.log(results);
-   	  if (results === 0) {
-   	  	p = document.createElement("P");
-    p.innerHTML = "I couldn't find anyone with that name, are you sure you spelled it right?";
-    p.setAttribute('id', 'errorMessage');
-    document.getElementById('error').appendChild(p);
-    document.getElementById('error').className = 'error_found';
-    var errorExists = document.getElementById("errorMessage");
-    setTimeout(function(){
-    errorExists.parentNode.removeChild(errorExists);
-    document.getElementById('error').className = 'error';
-}, 5000);
-   	  }
       var id = data.results[0].id;
       var name = data.results[0].name;
       var pic = 'https://image.tmdb.org/t/p/w500/' + data.results[0].profile_path;  
