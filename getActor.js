@@ -268,13 +268,14 @@ jsonHTTP.onreadystatechange=function() {
     setTimeout(function(){
     errorExists.parentNode.removeChild(errorExists);
     document.getElementById('error').className = 'error';
-}, 5000);  } else {
+}, 5000);  
+} else {
      for (var i = 0; i < castArray.length; i++) { 
      var cast = (castArray[i].name);
 
      var picture = 'https://image.tmdb.org/t/p/w500/' + castArray[i].profile_path;
 
-       castDisplay(cast, picture)
+       castDisplay(cast, picture);
      }
 }
 
