@@ -537,7 +537,7 @@ color: white;
 }
 
 .castFluid {
-position:relative;
+position: relative;
 text-align:center;
 width:90%;
 float:left;
@@ -565,14 +565,14 @@ height:100%;
 
 .otherCast .closebtn1 {
     position: absolute;
-    top: 20px;
-    left:80%;
+    top: 50px;
+    left:76%;
     float:right;
     font-size: 60px;
     z-index:1;
     color: #818181;
     text-decoration: none;
-    opacity: 0;
+    opacity: 1;
 }
 
 .otherCast a:hover, .otherCast a:focus {
