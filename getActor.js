@@ -287,7 +287,7 @@ function castDisplay(cast, picture) {
     nameDiv.setAttribute('id', 'CastName');
     p = document.createElement("P");
     p.className = 'castMemberName';
-    imageBox.className = 'star1';
+    imageBox.className = 'star2';
     imageBox.setAttribute('id', cast);
     if (picture == '?' || null || '') {
     imageBox.setAttribute('src', missingPoster);    
