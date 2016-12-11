@@ -285,7 +285,7 @@ function castDisplay(cast, picture) {
     div.className = 'castMembers';
     div.setAttribute('id','castMembersID');
     nameDiv.className = 'CastName';
-    nameDiv.setAttribute('id', 'CastName');
+    nameDiv.setAttribute('id', cast);
     p = document.createElement("P");
     p.className = 'castMemberName';
     imageBox.className = 'star2';
@@ -295,7 +295,7 @@ function castDisplay(cast, picture) {
     imageBox.setAttribute('src', missingPoster);    
     div.appendChild(imageBox);
     p.appendChild(text);
-    p.setAttribute('onclick',"CastSearch(event)");
+    nameDiv.setAttribute('onclick',"CastSearch(event)");
     nameDiv.appendChild(p);
     document.getElementById('otherCast').appendChild(div).appendChild(p);
     } else {
