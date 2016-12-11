@@ -203,22 +203,6 @@ background-size: cover;
   z-index:-1;
 }
 
-@media screen and (min-width: 200px) {.poster {height:550px;}
-}
-
-@media screen and (min-width: 375px) {.poster {height:500px;}
-}
-
-@media screen and (min-width: 649px) {.poster {height:450px;}
-}
-
-@media screen and (min-width: 650px) {.poster {height:400px;}
-}
-
-@media screen and (min-width: 730px) {.poster {height:350px;}
-}
-@media screen and (min-width: 731px) {.poster {height:300px;}
-}
 
 @media screen and (min-width: 200px) {.gridRow {width:550px;}
 }
@@ -248,6 +232,7 @@ background-size: cover;
   font-stretch:condensed;
   font-style:oblique;
   font-weight:bold;
+  font-size:10px;
 }
 
 @media screen and (min-width: 200px) {.gridRowText {width:550px; transform: scale(2);}
@@ -381,7 +366,7 @@ color: white;
   border-radius:10px;
   color: #818181;
   width:200px;
-  height:120px;
+  height:150px;
   text-align: center;
   display: inline;
   margin-top: -30px;
@@ -401,7 +386,7 @@ color: white;
   border-radius:10px;
   color: #818181;
   width:200px;
-  height:120px;
+  height:150px;
   text-align: center;
   display: inline;
     position: absolute;
