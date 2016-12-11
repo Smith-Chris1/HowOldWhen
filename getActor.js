@@ -255,12 +255,18 @@ jsonHTTP.open("GET", url, true);
 jsonHTTP.onreadystatechange=function() {
    if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
    		var data = JSON.parse(jsonHTTP.responseText);
-     var statusCode = data.statusCode;
      data = data['cast'];
      var castArray = data;
-     if (statusCode === 34) {
-   	  	p = document.createElement("P");
-    p.innerHTML = "I couldn't find anyone with that name, are you sure you spelled it right? If you did, the database may not be updated.";
+     for (var i = 0; i < castArray.length; i++) { 
+     var cast = (castArray[i].name);
+
+     var picture = 'https://image.tmdb.org/t/p/w500/' + castArray[i].profile_path;
+
+       castDisplay(cast, picture);
+     }
+ } else {
+   	p = document.createElement("P");
+    p.innerHTML = "For some reason the database can't find this titles cast information...";
     p.setAttribute('id', 'errorMessage');
     document.getElementById('error').appendChild(p);
     document.getElementById('error').className = 'error_found';
@@ -269,18 +275,8 @@ jsonHTTP.onreadystatechange=function() {
     errorExists.parentNode.removeChild(errorExists);
     document.getElementById('error').className = 'error';
 }, 5000);  
-} else {
-     for (var i = 0; i < castArray.length; i++) { 
-     var cast = (castArray[i].name);
-
-     var picture = 'https://image.tmdb.org/t/p/w500/' + castArray[i].profile_path;
-
-       castDisplay(cast, picture);
-     }
- }
 }
-
-}
+} 
   jsonHTTP.send();
 
 }
