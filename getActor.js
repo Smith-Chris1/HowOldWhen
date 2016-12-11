@@ -8,7 +8,7 @@ var recentThree;
 document.getElementById("searchOne").addEventListener("click", function() {
     getStarID(localStorage.getItem('recentOne')); 
 }, false);
-
+                      
 document.getElementById("searchTwo").addEventListener("click", function() {
     getStarID(localStorage.getItem('recentTwo')); 
 }, false);
@@ -63,9 +63,6 @@ jsonHTTP.onreadystatechange=function() {
    if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
    	  var data = JSON.parse(jsonHTTP.responseText);
    	  var results = data.total_results;
-   	  console.log(url);
-   	  console.log(data);
-   	  console.log(results);
    	  if (results === 0) {
    	  	p = document.createElement("P");
     p.innerHTML = "I couldn't find anyone with that name, are you sure you spelled it right?";
@@ -93,7 +90,6 @@ jsonHTTP.onreadystatechange=function() {
 	var temp1 = localStorage.getItem("recentOne");
 
     if (temp1 === name) {
-    	console.log(temp1);
     	localStorage.setItem('recentOne', temp1);
     } else {
 		if (localStorage.getItem("recentTwo") !== null) {
@@ -189,6 +185,7 @@ data.sort(function(a,b) {
             for (var i = 0; i < movieArray.length; i++) { 
             var movie = (movieArray[i].title) || (movieArray[i].name);
             var releaseDate = (movieArray[i].release_date) || (movieArray[i].first_air_date);
+            var movieID = (movieArray[i].id)
             if (releaseDate == null){ 
             releaseDate = '?';
            }
@@ -197,14 +194,14 @@ data.sort(function(a,b) {
             	poster = '?';
             } else {
             	poster = 'https://image.tmdb.org/t/p/w500/' + movieArray[i].poster_path;}
-            display(movie, releaseDate, bday, poster)
+            display(movie, releaseDate, bday, poster, movieID)
 }
   }
 }
 jsonHTTP.send();
 } 
 
-function display(title,releaseDate,bday,poster) {
+function display(title,releaseDate,bday,poster, movieID) {
     var missingPoster ='https://www.themoviedb.org/assets/1c4aa0e7695a4eebe9a4d2c34a93bf34/images/no-poster-w600_and_h900_bestv2-v2.png';
     var age;
     var div;
@@ -223,6 +220,8 @@ function display(title,releaseDate,bday,poster) {
     p = document.createElement("P");
     p.className = 'gridRowText';
     imageBox.className = 'poster';
+    imageBox.setAttribute('id', movieID);
+    imageBox.setAttribute('onclick',"getMovieCast(event);")
     if (poster == '?') {
     imageBox.setAttribute('src', missingPoster);    
     div.appendChild(imageBox);
@@ -244,3 +243,63 @@ function closeNav() {
     document.getElementById("myNav").style.width = "0%";
 }
 
+function getMovieCast(event) { 
+  var movieID = event.target.id;
+  var jsonHTTP = new XMLHttpRequest();
+	var api = '/credits?api_key=8bd29dde4b31287cd5579e4bd90c80b3';
+	var url1 = 'https://api.themoviedb.org/3/movie/';
+	var url = url1 + movieID + api
+
+jsonHTTP.open("GET", url, true);
+
+jsonHTTP.onreadystatechange=function() {
+   if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
+   		var data = JSON.parse(jsonHTTP.responseText);
+     data = data['cast'];
+     var castArray = data;
+     for (var i = 0; i < castArray.length; i++) { 
+     var cast = (castArray[i].name);
+
+     var picture = 'https://image.tmdb.org/t/p/w500/' + castArray[i].profile_path;
+
+       castDisplay(cast, picture)
+     }
+}
+}
+  jsonHTTP.send();
+
+}
+
+function castDisplay(cast, picture) {
+    var missingPoster ='https://www.themoviedb.org/assets/1c4aa0e7695a4eebe9a4d2c34a93bf34/images/no-poster-w600_and_h900_bestv2-v2.png';
+    var age;
+    var div;
+    var p;
+    var nameDiv;
+    var list = document.createElement('LI')
+    var imageBox = document.createElement('IMG');
+    var text = document.createTextNode(cast);
+    nameDiv = document.createElement("DIV");
+    div = document.createElement("DIV"); 
+    div.className = 'castMembers';
+    div.setAttribute('id','castMembersID');
+    nameDiv.className = 'CastName';
+    nameDiv.setAttribute('id', 'CastName');
+    p = document.createElement("P");
+    p.className = 'castMemberName';
+    imageBox.className = 'star1';
+    imageBox.setAttribute('id', cast);
+    if (picture == '?' || null || '') {
+    imageBox.setAttribute('src', missingPoster);    
+    div.appendChild(imageBox);
+    p.appendChild(text);
+    nameDiv.appendChild(p);
+    document.getElementById('otherCast').appendChild(div).appendChild(p);
+    } else {
+    imageBox.setAttribute('src', picture);   
+    div.appendChild(imageBox);
+    p.appendChild(text);
+    nameDiv.appendChild(p);
+    document.getElementById('otherCast').appendChild(div).appendChild(nameDiv);
+    }
+}
