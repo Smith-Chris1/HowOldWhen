@@ -304,12 +304,12 @@ function castDisplay(cast, picture) {
     document.getElementById('castFluid').appendChild(div);
     document.getElementById('castFluid').appendChild(nameDiv);
     document.getElementById("otherCast").style.width = "90%";
-    document.getElementById('closebtn1').style.opacity = '1';
+    document.getElementById('closebtn1').style.opacity = "1";
     }
 }
 
 function closeCast() {
     document.getElementById("otherCast").style.width = "0%";
     document.getElementById('castFluid').innerHTML = "";
-    document.getElementById('closebtn1').style.opacity = '0';
+    document.getElementById('closebtn1').style.opacity = "0";
 }
