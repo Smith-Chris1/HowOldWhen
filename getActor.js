@@ -277,6 +277,7 @@ jsonHTTP.onreadystatechange=function() {
 
        castDisplay(cast, picture);
      }
+ }
 }
 
 }
@@ -337,4 +338,4 @@ function CastSearch(event) {
   document.getElementById('otherCast').style.left = "-500px";
   getStarID(name);
 }
-  
+ 
