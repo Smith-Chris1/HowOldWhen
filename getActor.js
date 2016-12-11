@@ -268,7 +268,7 @@ jsonHTTP.onreadystatechange=function() {
     setTimeout(function(){
     errorExists.parentNode.removeChild(errorExists);
     document.getElementById('error').className = 'error';
-}, 5000); else {
+}, 5000);  } else {
      for (var i = 0; i < castArray.length; i++) { 
      var cast = (castArray[i].name);
 
