@@ -290,10 +290,12 @@ function castDisplay(cast, picture) {
     p.className = 'castMemberName';
     imageBox.className = 'star2';
     imageBox.setAttribute('id', cast);
+    imageBox.setAttribute('onclick',"CastSearch(event)");
     if (picture == '?' || null || '') {
     imageBox.setAttribute('src', missingPoster);    
     div.appendChild(imageBox);
     p.appendChild(text);
+    p.setAttribute('onclick',"CastSearch(event)");
     nameDiv.appendChild(p);
     document.getElementById('otherCast').appendChild(div).appendChild(p);
     } else {
@@ -313,3 +315,10 @@ function closeCast() {
     document.getElementById('castFluid').innerHTML = "";
     document.getElementById('otherCast').style.left = "-500px";
 }
+
+function CastSearch(event) { 
+  var name = event.target.id;
+  document.getElementById('otherCast').style.left = "-500px";
+  getStarID(name);
+}
+  
