@@ -302,6 +302,7 @@ function castDisplay(cast, picture) {
     nameDiv.appendChild(p);
     document.getElementById('castFluid').appendChild(div);
     document.getElementById('castFluid').appendChild(nameDiv);
+    document.getElementById("otherCast").style.width = "90%";
     }
 }
 
