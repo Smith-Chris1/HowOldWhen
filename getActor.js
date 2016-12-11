@@ -255,9 +255,9 @@ jsonHTTP.open("GET", url, true);
 jsonHTTP.onreadystatechange=function() {
    if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
    		var data = JSON.parse(jsonHTTP.responseText);
+     var statusCode = data.statusCode;
      data = data['cast'];
      var castArray = data;
-     var statusCode = data.statusCode;
      if (statusCode === 34) {
    	  	p = document.createElement("P");
     p.innerHTML = "I couldn't find anyone with that name, are you sure you spelled it right? If you did, the database may not be updated.";
