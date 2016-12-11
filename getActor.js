@@ -63,9 +63,10 @@ jsonHTTP.onreadystatechange=function() {
    if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
    	  var data = JSON.parse(jsonHTTP.responseText);
    	  var results = data.total_results;
-   	  if (results === 0) {
+   	  var statusCode = data.statusCode;
+   	  if (results === 0 || statusCode === 34) {
    	  	p = document.createElement("P");
-    p.innerHTML = "I couldn't find anyone with that name, are you sure you spelled it right?";
+    p.innerHTML = "I couldn't find anyone with that name, are you sure you spelled it right? If you did, the database may not be updated.";
     p.setAttribute('id', 'errorMessage');
     document.getElementById('error').appendChild(p);
     document.getElementById('error').className = 'error_found';
