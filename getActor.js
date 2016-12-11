@@ -264,7 +264,10 @@ jsonHTTP.onreadystatechange=function() {
 
        castDisplay(cast, picture);
      }
- } else {
+ } 
+} 
+  jsonHTTP.send();
+
    	p = document.createElement("P");
     p.innerHTML = "For some reason the database can't find this titles cast information...";
     p.setAttribute('id', 'errorMessage');
@@ -275,9 +278,7 @@ jsonHTTP.onreadystatechange=function() {
     errorExists.parentNode.removeChild(errorExists);
     document.getElementById('error').className = 'error';
 }, 5000);  
-}
-} 
-  jsonHTTP.send();
+
 
 }
 
