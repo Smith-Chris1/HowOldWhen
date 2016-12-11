@@ -508,6 +508,7 @@ color: white;
     margin:90px auto;
     padding: 40px;
     height:60%;
+    z-index: 1;
 }
 
 
