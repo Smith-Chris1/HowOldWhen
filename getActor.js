@@ -304,3 +304,7 @@ function castDisplay(cast, picture) {
     document.getElementById('castFluid').appendChild(nameDiv);
     }
 }
+
+function closeCast() {
+    document.getElementById("otherCast").style.width = "0%";
+}
