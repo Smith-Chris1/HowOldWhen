@@ -502,7 +502,7 @@ color: white;
 .otherCast {
   position:absolute;
   width: 0%;
-  left:90px;
+  left:-500px;
     margin:90px auto;
     padding: 40px;
     height:60%;
