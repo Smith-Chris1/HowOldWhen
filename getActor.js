@@ -253,8 +253,10 @@ function getMovieCast(event) {
 jsonHTTP.open("GET", url, true);
 
 jsonHTTP.onreadystatechange=function() {
+  
    if (jsonHTTP.readyState==4 && jsonHTTP.status==200) {
    		var data = JSON.parse(jsonHTTP.responseText);
+     var statusCode = data.status_code;
      data = data['cast'];
      var castArray = data;
      for (var i = 0; i < castArray.length; i++) { 
@@ -264,21 +266,11 @@ jsonHTTP.onreadystatechange=function() {
 
        castDisplay(cast, picture);
      }
- } 
-} 
+ }
+}
+
   jsonHTTP.send();
-
-   	p = document.createElement("P");
-    p.innerHTML = "For some reason the database can't find this titles cast information...";
-    p.setAttribute('id', 'errorMessage');
-    document.getElementById('error').appendChild(p);
-    document.getElementById('error').className = 'error_found';
-    var errorExists = document.getElementById("errorMessage");
-    setTimeout(function(){
-    errorExists.parentNode.removeChild(errorExists);
-    document.getElementById('error').className = 'error';
-}, 5000);  
-
+  
 
 }
 
