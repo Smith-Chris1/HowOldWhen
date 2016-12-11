@@ -309,5 +309,5 @@ function castDisplay(cast, picture) {
 
 function closeCast() {
     document.getElementById("otherCast").style.width = "0%";
-    document.getElementById('otherCast').innerHTML = "";
+    document.getElementById('castFluid').innerHTML = "";
 }

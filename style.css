@@ -566,6 +566,14 @@ height:100%;
 .otherCast .closebtn {
     position: absolute;
     top: 20px;
-    right: 45px;
+    left:80%;
+    float:right;
     font-size: 60px;
+    z-index:1;
+    color: #818181;
+    text-decoration: none;
+}
+
+.otherCast a:hover, .otherCast a:focus {
+    color: #f1f1f1;
 }
