@@ -271,6 +271,7 @@ jsonHTTP.onreadystatechange=function() {
 }
 
 function castDisplay(cast, picture) {
+
     var missingPoster ='https://www.themoviedb.org/assets/1c4aa0e7695a4eebe9a4d2c34a93bf34/images/no-poster-w600_and_h900_bestv2-v2.png';
     var age;
     var div;
@@ -308,4 +309,5 @@ function castDisplay(cast, picture) {
 
 function closeCast() {
     document.getElementById("otherCast").style.width = "0%";
+    document.getElementById('otherCast').innerHTML = "";
 }
