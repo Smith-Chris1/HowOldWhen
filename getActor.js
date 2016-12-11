@@ -300,7 +300,7 @@ function castDisplay(cast, picture) {
     div.appendChild(imageBox);
     p.appendChild(text);
     nameDiv.appendChild(p);
-    document.getElementById('otherCast').appendChild(div);
-    document.getElementById('otherCast').appendChild(nameDiv);
+    document.getElementById('castFluid').appendChild(div);
+    document.getElementById('castFluid').appendChild(nameDiv);
     }
 }

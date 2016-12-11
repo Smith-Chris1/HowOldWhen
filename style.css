@@ -500,13 +500,14 @@ color: white;
 
 
 .otherCast {
-  position:absolute;
-text-align:center;
-height:80%;
-float:right;
+  width: 80%;
+  margin:200px auto;
+  padding: 10px;
+  margin-right:50px;
+  height:100px;
+  float:right;
+  text-align:center;
 
   background-color: rgba(0,0,0,.7);
   box-shadow: 0px 0px 50px rgba(0,0,0,1);
     border-radius:10px;
- 
-}
