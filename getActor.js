@@ -318,6 +318,8 @@ function closeCast() {
 
 function CastSearch(event) { 
   var name = event.target.id;
+   document.getElementById("otherCast").style.width = "0%";
+   document.getElementById('castFluid').innerHTML = "";
   document.getElementById('otherCast').style.left = "-500px";
   getStarID(name);
 }
