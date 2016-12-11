@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-	<link rel="stylesheet" type="text/css"href="../HowOldWhen/style.css">
+  <link rel="stylesheet" type="text/css"href="../HowOldWhen/style.css">
 </head>
 <body>
 <h1 class = begin>how old was that actor was in that movie?</h1>
@@ -25,7 +25,8 @@
 <p><input type="text" placeholder="search for an actor..." class="focus" id="starName" onkeydown = "if (event.keyCode == 13)
                         document.getElementById('searchButton').click()"></input><button id ='searchButton' button class="go">go</button></p>
 <div id = 'starImage' class = 'circle'></div>
-  <p id = 'error' class = 'error' </p>
+  <div id = 'error' class = 'error'> 
+  </div>
 
 </div>
 </div>
@@ -38,9 +39,16 @@
   <p id="searchOne" class = "searchOneClass"></p>
   <p id="searchTwo" class = "searchTwoClass"></p>
   <p id="searchThree" class = "searchThreeClass"></p>
-	
+  
 
 </div>
+ <div class='otherCast', id='otherCast'>
+ <a href="javascript:void(0)" class="closebtn1" onclick="closeCast()">&times;</a>
+ <div class='castFluid' id = 'castFluid'>
+ </div>
+ </div>
+
+
 <script src="../HowOldWhen/getActor.js"></script>
 
 </body>

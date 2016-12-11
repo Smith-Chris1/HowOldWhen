@@ -584,3 +584,164 @@ height:100%;
 .otherCast a:hover, .otherCast a:focus {
     color: #f1f1f1;
 }
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+.poster {height:100px;}
+.poster {height:300px;}
+.gridRowText {font-size:13px;}
+.fluid-wrap {height:74%;}
+.recent_found {top:90% !important;%}
+.overlay {margin-left:90px;}
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+.poster {height:100px;}
+.poster {height:300px;}
+.recent_found {transform:scaleY(.8);}
+.recent_found {height:140px;}
+.recent_found {margin-left:-90px;}
+.recent_found {top:72% !important;}
+.searchOneClass {font-size:13px}
+.searchTwoClass {font-size:13px}
+.searchThreeClass {font-size:13px}
+
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+.poster {height:100px;}
+.poster {height:300px;}
+.recent_found {transform:scaleY(.8);}
+.recent_found {height:140px;}
+.recent_found {margin-left:-90px;}
+.recent_found {top:72% !important;}
+.searchOneClass {font-size:13px}
+.searchTwoClass {font-size:13px}
+.searchThreeClass {font-size:13px}
+
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+.poster {height:100px;}
+.poster {height:300px;}
+.gridRowText {font-size:13px;}
+.fluid-wrap {height:74%;}
+.recent_found {top:90% !important;%}
+.overlay {margin-left:90px;}
+}
+
+
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+.poster {height:100px;}
+.poster {height:300px;}
+.recent_found {transform:scaleY(.8);}
+.recent_found {height:140px;}
+.recent_found {margin-left:-90px;}
+.recent_found {top:72% !important;}
+.searchOneClass {font-size:13px}
+.searchTwoClass {font-size:13px}
+.searchThreeClass {font-size:13px}
+
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+.poster {height:100px;}
+.poster {height:300px;}
+.recent_found {transform:scaleY(.8);}
+.recent_found {height:140px;}
+.recent_found {margin-left:-90px;}
+.recent_found {top:82% !important;}
+.searchOneClass {font-size:15px}
+.searchTwoClass {font-size:15px}
+.searchThreeClass {font-size:15px}
+
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+.fluid-wrap {height:70%;}
+.gridRowText {font-size:11px;}
+.poster {height:100px;}
+.poster {height:300px;}
+.recent_found {transform:scaleY(.8);}
+.recent_found {height:140px;}
+.recent_found {margin-left:-90px;}
+.recent_found {top:82% !important;}
+.searchOneClass {font-size:15px}
+.searchTwoClass {font-size:15px}
+.searchThreeClass {font-size:15px}
+
+}
+
+
+@media only screen 
+  and (min-device-width: 360px) 
+  and (max-device-width: 640px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+.poster {height:150px;}
+.gridRowText {font-size:08px;}
+.recent_found {transform:scaleY(.8);}
+.recent_found {height:140px;}
+.recent_found {margin-left:-90px;}
+.recent_found {top:72% !important;}
+.searchOneClass {font-size:15px}
+.searchTwoClass {font-size:15px}
+.searchThreeClass {font-size:15px}
+
+}
+
+@media only screen 
+  and (min-device-width: 360px) 
+  and (max-device-width: 640px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+.poster {height:150px;}
+.gridRowText {font-size:08px;}
+
+.recent_found {height:140px;}
+
+.recent_found {top:90% !important;}
+
+
+}
+
+@media only screen 
+  and (min-device-width: 412px) 
+  and (max-device-width: 732px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+.poster {height:150px;}
+.gridRowText {font-size:08px;}
+
+.recent_found {height:140px;}
+
+.recent_found {top:72% !important;}
+
+}
