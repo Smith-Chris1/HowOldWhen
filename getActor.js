@@ -225,7 +225,7 @@ function display(title,releaseDate,bday,poster, movieID) {
     var movieTitle = document.createTextNode (title);
     var imageBox = document.createElement('IMG');
     div = document.createElement("DIV"); 
-    div.className = 'gridRow'
+    div.className = 'gridRow';
     div.setAttribute('id','gridRow');
     p = document.createElement("P");
     p.className = 'gridRowText';
