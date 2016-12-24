@@ -212,7 +212,7 @@ function display(title,releaseDate,bday,poster, movieID) {
      } else {
      age = Math.floor(milliseconds / 31536000000);
      }
-    var text = document.createTextNode(title + " , age " + age);
+    var text = document.createTextNode("age " + age);
     var imageBox = document.createElement('IMG');
     div = document.createElement("DIV"); 
     div.className = 'gridRow'
