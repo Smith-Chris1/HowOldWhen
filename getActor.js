@@ -176,11 +176,20 @@ jsonHTTP.onreadystatechange=function() {
 data.sort(function(a,b) {
     if ( a.release_date < b.release_date )
         return -1;
+    if (a.first_air_date < b.first_air_date)
+      return -1;
+    if (a.first_air_date < b.release_date)
+      return -1;
     if ( a.release_date > b.release_date )
         return 1;
-
+    if (a.first_air_date > b.first_air_date)
+      return 1;
+    if (a.release_date > b.first_air_date)
+      return 1;
 });
+
 	   data.reverse();
+     console.log(data);
         var movieArray = data;
             for (var i = 0; i < movieArray.length; i++) { 
             var movie = (movieArray[i].title) || (movieArray[i].name);
@@ -213,25 +222,32 @@ function display(title,releaseDate,bday,poster, movieID) {
      age = Math.floor(milliseconds / 31536000000);
      }
     var text = document.createTextNode("age " + age);
+    var movieTitle = document.createTextNode (title);
     var imageBox = document.createElement('IMG');
     div = document.createElement("DIV"); 
     div.className = 'gridRow'
     div.setAttribute('id','gridRow');
     p = document.createElement("P");
     p.className = 'gridRowText';
+    var pTitle = document.createElement("P");
+    pTitle.className = 'gridRowTitle';
     imageBox.className = 'poster';
     imageBox.setAttribute('id', movieID);
     imageBox.setAttribute('onclick',"getMovieCast(event);")
     if (poster == '?') {
-    imageBox.setAttribute('src', missingPoster);    
+    imageBox.setAttribute('src', missingPoster);   
     div.appendChild(imageBox);
     p.appendChild(text);
+    pTitle.appendChild(movieTitle);
     document.getElementById('results').appendChild(div).appendChild(p);
+document.getElementById('results').appendChild(div).appendChild(pTitle);
     } else {
     imageBox.setAttribute('src', poster);   
     div.appendChild(imageBox);
     p.appendChild(text);
+    pTitle.appendChild(movieTitle);
     document.getElementById('results').appendChild(div).appendChild(p);
+      document.getElementById('results').appendChild(div).appendChild(pTitle);
     }
 }
 
