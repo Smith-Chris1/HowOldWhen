@@ -238,8 +238,9 @@ background-size: cover;
   font-size: 8px;
   text-align: right;
   line-height: 10px;
-  margin-right: 180px;
+  /* margin-right: 180px; */
   margin-left: 50px;
+  top: -3px;
   float:left;
   background-color: rgba(0,0,0,.7);
   position:absolute;
