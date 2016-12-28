@@ -28,15 +28,15 @@
   height: 100px;
   display:inline-block;
   float:left;
-  margin-left:20px;
-  margin-top:-35px;
-    position: relative;
-    overflow: hidden;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%;
+  margin-left: 130px;
+  margin-top: -45px;
+  position: relative;
+  overflow: hidden;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
   transform: translate(-50%, -50%);
   }
 
@@ -57,21 +57,6 @@
   transform: translate(-50%, -50%);
   }
 
-@media screen and (min-width: 360px) {.circle {left:-100px;margin-right:-90px;}
-}
-@media screen and (min-width: 500px) {.circle {margin-left:0px;}
-}
-
-@media screen and (min-width: 700px) {.circle {margin-left:30px;}
-}
-
-@media screen and (min-width: 1200px) {.circle {margin-left:80px;}
-}
-
-@media screen and (min-width: 1400px) {.circle {margin-left: 200px;}
-}
-@media screen and (max-width: 1920px) {.circle {/* margin-left: 140px; */left: -50px;/* padding-left: 40px; */}
-}
  input[type="text"] {
   padding: 10px;
   margin-left:50px;
@@ -105,7 +90,7 @@
 .bio {
   display:inline-block;
   margin-top: -10px;
-  margin-left: 20px;
+  margin-left: 0px;
   float:left;
   text-align:center;
 }
@@ -201,7 +186,7 @@ background-size: cover;
 }
 
 .gridRow {
-  width: 100px;
+  width: 200px;
   height: 300px;
   display: inline-block;
   /* padding-top: 0px; */
@@ -210,22 +195,7 @@ background-size: cover;
 }
 
 
-@media screen and (min-width: 200px) {.gridRow {width:550px;}
-}
 
-@media screen and (min-width: 375px) {.gridRow {width:500px;}
-}
-
-@media screen and (min-width: 649px) {.gridRow {width:450px;}
-}
-
-@media screen and (min-width: 650px) {.gridRow {width:400px;}
-}
-
-@media screen and (min-width: 730px) {.gridRow {width:350px;}
-}
-@media screen and (min-width: 731px) {.gridRow {width: 200px;/* height: 280px; *//* position: relative; */}
-}
 .gridRow:hover{
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
@@ -234,15 +204,14 @@ background-size: cover;
 }
 
 .gridRowText{
-  width: 100px;
+  width: 200px;
   font-weight:bold;
-  font-size: 8px;
+  font-size: 15px;
   text-align: right;
   line-height: 10px;
   /* margin-right: 180px; */
-  margin-left: 50px;
-  top: -3px;
-  float:left;
+  top: -15px;
+  /* float:left; */
   background-color: rgba(0,0,0,.7);
   position:absolute;
   text-transform: uppercase;
@@ -266,45 +235,13 @@ background-size: cover;
   float: left;
 }
 
-@media screen and (min-width: 200px) {.gridRowText {/* width:550px; */transform: scale(2);}
-}
 
-@media screen and (min-width: 375px) {.gridRowText {/* width:500px; */}
-}
-
-@media screen and (min-width: 649px) {.gridRowText {/* width:450px; */}
-}
-
-@media screen and (min-width: 650px) {.gridRowText {/* width:400px; */}
-}
-
-@media screen and (min-width: 730px) {.gridRowText {/* width:350px; */}
-}
-@media screen and (min-width: 731px) {.gridRowText {/* width:300px; */}
-}
 
 .fluid-wrap {
   width: 100%;
   margin:90px auto;
   /* padding: 40px; */
-  height:60%;
-}
-
-@media screen and (min-height: 200px) {.fluid-wrap {height:33%;}
-}
-
-@media screen and (min-height: 375px) {.fluid-wrap {height:43%;}
-}
-
-@media screen and (min-height: 649px) {.fluid-wrap {height:73%;}
-}
-
-@media screen and (min-height: 650px) {.fluid-wrap {height:57%;}
-}
-
-@media screen and (min-height: 730px) {.fluid-wrap {height:73%;}
-}
-@media screen and (min-height: 731px) {.fluid-wrap {height: 65%;}
+  height:65%;
 }
 
 .results {
@@ -554,23 +491,6 @@ color: white;
 }
 
 
-@media screen and (min-height: 200px) {.otherCast {height:33%;}
-}
-
-@media screen and (min-height: 375px) {.otherCast {height:43%;}
-}
-
-@media screen and (min-height: 649px) {.otherCast {height:73%;}
-}
-
-@media screen and (min-height: 650px) {.otherCast {height:57%;}
-}
-
-@media screen and (min-height: 730px) {.otherCast {height:73%;}
-}
-@media screen and (min-height: 731px) {.otherCast {height:63%;}
-}
-
 .star2 {
        text-align: center;
     display: inline-block;
@@ -622,165 +542,4 @@ height:100%;
 
 .otherCast a:hover, .otherCast a:focus {
     color: #f1f1f1;
-}
-
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-.poster {height:100px;}
-.poster {height:300px;}
-.gridRowText {font-size:13px;}
-.fluid-wrap {height:74%;}
-.recent_found {top:90% !important;%}
-.overlay {margin-left:90px;}
-}
-
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-.poster {height:100px;}
-.poster {height:300px;}
-.recent_found {transform:scaleY(.8);}
-.recent_found {height:140px;}
-.recent_found {margin-left:-90px;}
-.recent_found {top:72% !important;}
-.searchOneClass {font-size:13px}
-.searchTwoClass {font-size:13px}
-.searchThreeClass {font-size:13px}
-
-}
-
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-.poster {height:100px;}
-.poster {height:300px;}
-.recent_found {transform:scaleY(.8);}
-.recent_found {height:140px;}
-.recent_found {margin-left:-90px;}
-.recent_found {top:72% !important;}
-.searchOneClass {font-size:13px}
-.searchTwoClass {font-size:13px}
-.searchThreeClass {font-size:13px}
-
-}
-
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-.poster {height:100px;}
-.poster {height:300px;}
-.gridRowText {font-size:13px;}
-.fluid-wrap {height:74%;}
-.recent_found {top:90% !important;%}
-.overlay {margin-left:90px;}
-}
-
-
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-.poster {height:100px;}
-.poster {height:300px;}
-.recent_found {transform:scaleY(.8);}
-.recent_found {height:140px;}
-.recent_found {margin-left:-90px;}
-.recent_found {top:72% !important;}
-.searchOneClass {font-size:13px}
-.searchTwoClass {font-size:13px}
-.searchThreeClass {font-size:13px}
-
-}
-
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-.poster {height:100px;}
-.poster {height:300px;}
-.recent_found {transform:scaleY(.8);}
-.recent_found {height:140px;}
-.recent_found {margin-left:-90px;}
-.recent_found {top:82% !important;}
-.searchOneClass {font-size:15px}
-.searchTwoClass {font-size:15px}
-.searchThreeClass {font-size:15px}
-
-}
-
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-.fluid-wrap {height:70%;}
-.gridRowText {font-size:11px;}
-.poster {height:100px;}
-.poster {height:300px;}
-.recent_found {transform:scaleY(.8);}
-.recent_found {height:140px;}
-.recent_found {margin-left:-90px;}
-.recent_found {top:82% !important;}
-.searchOneClass {font-size:15px}
-.searchTwoClass {font-size:15px}
-.searchThreeClass {font-size:15px}
-
-}
-
-
-@media only screen 
-  and (min-device-width: 360px) 
-  and (max-device-width: 640px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-.poster {height:150px;}
-.gridRowText {font-size:08px;}
-.recent_found {transform:scaleY(.8);}
-.recent_found {height:140px;}
-.recent_found {margin-left:-90px;}
-.recent_found {top:72% !important;}
-.searchOneClass {font-size:15px}
-.searchTwoClass {font-size:15px}
-.searchThreeClass {font-size:15px}
-
-} 
-
-@media only screen 
-  and (min-device-width: 360px) 
-  and (max-device-width: 640px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-.poster {height:150px;}
-.gridRowText {font-size:08px;}
-
-.recent_found {height:140px;}
-
-.recent_found {top:90% !important;}
-
-
-}
-
-@media only screen 
-  and (min-device-width: 412px) 
-  and (max-device-width: 732px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-.poster {height:150px;}
-.gridRowText {font-size:08px;}
-
-.recent_found {height:140px;}
-
-.recent_found {top:72% !important;}
-
 }
