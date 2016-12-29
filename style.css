@@ -267,6 +267,7 @@ background-size: cover;
   background-color: rgba(0,0,0,.7);
   box-shadow: 0px 0px 50px rgba(0,0,0,1);
   /* border-radius:10px; */
+  -webkit-overflow-scrolling: touch;
   }
 
 .results::-webkit-scrollbar { 
