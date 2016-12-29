@@ -144,8 +144,9 @@ border: none;
 .poster{
   top: 50%;
   left: 50%;
-  width: 100%;
-  display:inline-block;
+  /* width: 100%; */
+  /* max-width: 100%; */
+  /* display:inline-block; */
   opacity: .5;
   float: right;
   overflow:hidden;
@@ -154,7 +155,6 @@ border: none;
   -moz-transition: opacity 1s ease-in-out;
   -webkit-transition: opacity 1s ease-in-out;
   opacity:.5;
- 
 }
 
 
@@ -190,8 +190,11 @@ background-size: cover;
 }
 
 .gridRow {
-  width: 200px;
-  height: 300px;
+  /* width: 200px; */
+  max-width: 350px;
+  /* min-width: 10%; */
+  /* height: 300px; */
+  max-height: 525px;
   display: inline-flex;
   margin-bottom: -25px;
   margin-left: 5px;
@@ -212,7 +215,8 @@ background-size: cover;
 
 
 .gridRowText{
-  width: 200px;
+  width: 350px;
+  /* max-width: 350px; */
   font-weight:bold;
   font-size: 30px;
   text-align: right;
@@ -221,15 +225,14 @@ background-size: cover;
   top: -15px;
   -moz-transition: opacity .5s ease-in-out;
   -webkit-transition: opacity .5s ease-in-out;
-  position:absolute;
+  position: absolute;
   text-transform: uppercase;
   color: #FFAE00;
   /*outline-color: black;*/
   float: right;
 }
 .gridRowTitle {
-  width: 200px;
-  
+  width: 350px;
   /* font-weight:bold; */
   font-size: 15px;
   text-align: right;
