@@ -607,7 +607,7 @@ height:90%;
   left: 50%;
   transform: translate(-50%, 200%);
   color: #818181;
-  z-index: 0;
+  z-index: 1;
 }
 .recentTitle {
   margin-top: 5px;
@@ -671,6 +671,7 @@ height:90%;
   height:65%;
   top: -20px;
   /* margin-top: -90%; */
+  z-index:2;
 }
 .results {
   position:relative;
